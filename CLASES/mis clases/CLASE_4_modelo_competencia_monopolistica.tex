@@ -1,0 +1,225 @@
+\documentclass[10pt, xcolor=table, x11names]{beamer}
+\usepackage[spanish]{babel} %CORTE DE PALABRAS RESPETANDO EL IDIOMA ESPAÑOL.
+\usepackage[Utf8]{inputenc} %acentos desde el teclado
+\usepackage	{textpos}
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning} 
+\usefonttheme{professionalfonts} % fuentes de LaTeX\epsilon
+\usetheme{Boadilla}      % or try Darmstadt, Madrid, Warsaw, ...
+\usecolortheme[RGB={130,130,190}]{structure} % or try albatross, beaver, crane, ...
+\useinnertheme{rounded}
+%\useoutertheme{shadow}
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamertemplate{navigation symbols}{}
+\setbeamercovered{transparent} % Velos
+\setbeamertemplate{caption}[numbered]
+\usepackage[spanish, authoryear, roud, datebegin]{flexbib} %CITAS BIBLIOGRÁFICAS
+\newtheorem{Teorema}{Teorema}
+\usepackage{ragged2e}
+\justifying
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[x11names,table]{xcolor}
+\usepackage[pdftex]{graphicx}
+\usepackage{epstopdf} % Convertir .eps a .pdf (si fuera necesario)
+\DeclareGraphicsExtensions{.pdf,.png,.jpg, .eps} % busca en este orden!
+\title[]{ENFOQUE DE ORGANIZACIÓN INDUSTRIAL (IO): COMPETENCIA MONOPOLISTICA}
+\author[Luis Ortiz]{Luis Ortiz Cevallos}
+\institute[SECMCA]{\bf SECMCA}
+\date[\today]{\footnotesize \today}
+\usepackage[pdftex]{hyperref}
+\hypersetup{colorlinks,%
+	citecolor=blue,%
+	filecolor=blue,%
+	linkcolor=blue,%
+	urlcolor=blue,%
+	pdftex}
+
+\begin{document}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{{\normalsize COMPETENCIA MONOPOLISTICA} {}}
+    
+    \begin{block} {INTRODUCCIÓN}
+     El concepto de competencia monopolistica puede entenderse como cuando al haber algún grado de diferenciación entre los productos de las firmas competidoras, competir en precios podría conducir a un resultado próximo al extremo del modelo puro a lo Bertrand.\\
+     Uno de los modelos más populares es el \cite{Salop1979} en el cual la diferenciación de productos proviene por los costos de transportes.\\
+     Presentaremos tres aplicaciones al Salop model que intentan responder las siguientes preguntas:
+     \begin{enumerate}
+         \item ¿La libre competencia conduce a un número óptimo de bancos?
+         \item ¿Cuales son los efectos sobre la regulación del interés de los depósitos sobre el interés del crédito?
+         \item ¿La libre competencia conduce a un nivel apropiado de cooperación en la red de ATM?
+     \end{enumerate}
+         
+    \end{block}	
+    
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{{\normalsize ¿La libre competencia conduce a un número óptimo de bancos?} {}}
+    
+   \begin{block} {Estructura básica del modelo}
+       \begin{description}
+           \item[Supuesto 1]  Considere un continuo de depositantes, cada uno dotado con una unidad de dinero y distribuido de forma uniforme a lo largo del perímetro de un  circulo.
+           \item[Supuesto 2] Hay un continuo de Bancos indexados por $i=1,2,\cdots N$ distribuidos a lo largo del perímetro del circulo, los cuales captan los depósitos para invertirlos en una tecnología sin riesgos a un retorno constante r.
+           \item[Supuesto 3] Los depositantes no tienen acceso a esa tecnología.
+            \item[Supuesto 4] Al hacer un depósito los sujetos incurren en un costo ($\iota x$) proporcional a la distancia (x) de su ubicación con respecto al banco. 
+             \item[Supuesto 5] El perímetro  del circulo es normalizada a 1 y la masa total de depositantes está dado por D
+       \end{description}
+       
+   \end{block}	
+    
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{{\normalsize ¿La libre competencia conduce a un número óptimo de bancos?} {}}
+ Si los depositantes están distribuidos de manera uniforme, la óptima organización de la industria bancaria corresponde a la locación simétrica de los N bancos.\\
+ La máxima distancia hacia un banco de un depositante es  $\frac{1}{2N}$. La suma de todos los costos de transportes puede ser computada al dividir el circulo en 2N arcos iguales (arco de un circulo es un segmento de su perímetro).  
+   \begin{align}
+  2N\int_{0}^{\frac{1}{2N}}\iota xDdx&=\frac{\iota D}{4N}
+  \end{align}  
+    
+  El costo unitario de la creación de un banco es f. El número óptimo de banco es obtenido, minimizando la suma de costos de creación y transportación.
+  
+   \begin{align}
+  Nf+\frac{\iota D}{4N}
+  \end{align}  
+  Despreciando indivisibilidades el mínimo se obtiene derivando con respecto a n
+  \begin{align}
+  N-\frac{\iota D}{4N^{2}}&=0 \nonumber\\
+  N^{*}&=\frac{1}{2}\sqrt{\frac{\iota D}{f}}
+  \end{align}  
+\end{frame}
+
+
+
+\begin{frame}
+    \frametitle{{\normalsize ¿La libre competencia conduce a un número óptimo de bancos?} {}}
+    Como algunos bancos pueden aparecer dado que no hay barreras de entrada. Si consideramos que N bancos entran de manera simultanea localizándose de manera uniforme en el circulo y creado depósitos a una tasa de $r_{D}^{i}$. Para determinar el volumen de depósito $D_{i}$ atraído a un banco, es necesario computar la locación de los depositadores marginales quienes están indiferentes entre ir al banco i o al banco i-1. La distancia entre los bancos de un depositante marginal está dado por:
+     \begin{align}
+   r_{D}^{i}-\iota\hat{x}_{i}&=r_{D}^{i-1}-\iota \left( \frac{1}{n}-\hat{x}_{i}\right) 
+    \end{align}  
+    Implicando que:
+    \begin{align}
+   \hat{x}_{i}&=\frac{1}{2N}+\frac{r_{D}^{i}-r_{D}^{i-1}}{2\iota}\nonumber
+    \end{align}  
+    Siendo el volumen de depósitos atraídos al banco i:
+    \begin{align}
+    D_{i}&=D\left[\frac{1}{N}+\frac{2r_{D}^{i}-r_{D}^{i+1}-r_{D}^{i-1}}{2\iota} \right] \nonumber
+    \end{align}  
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize ¿La libre competencia conduce a un número óptimo de bancos?} {}}
+    Dado que estamos basados en un circulo, la siguiente convención es útil: 
+    $r_{D}^{N+1}=r_{D}^{1}$. El beneficio del banco i está dado por:
+    \begin{align}
+    \pi_{i}&=D(r-r_{D}^{i})\left(\frac{1}{N}+\frac{2r_{D}^{i}-r_{D}^{i+1}-r_{D}^{i-1}}{2\iota} \right) \nonumber
+    \end{align}  
+    El equilibrio es obtenido cuando todos los $i\; \; y\; \; r_{D}^{i}$, maximizan los $\pi_{i}$ (mientras las otras tasas se mantienen constantes). Eso es equivalente a:
+     \begin{align}
+     r-r_{D}^{i}&=\frac{\iota}{N}+\frac{2r_{D}^{i}-r_{D}^{i+1}-r_{D}^{i-1}}{2}  \nonumber
+     \end{align}  
+    Este sistema lineal tiene solución única: 
+    \begin{align}
+    r_{D}^{i}&=\cdots=r_{D}^{N}=r-\frac{\iota}{N} \nonumber
+    \end{align} 
+    Implicando que todos los bancos tienen el mismo beneficio.
+    \begin{align}
+    \pi_{1}&=\cdots=\pi_{N}=\frac{\iota D}{N^{2}} \nonumber
+    \end{align} 
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{{\normalsize ¿La libre competencia conduce a un número óptimo de bancos?} {}}
+   Dado que no hay restricciones de entrada, el número de bancos de equilibrio, sera obtenido cuando los beneficios igualen el costo de creación dado por:
+   \begin{align}
+   N_{e}^{*}&=\sqrt{\frac{\iota D}{f}}\nonumber
+   \end{align} 
+   Noten que existe diferencias entre $N_{e}^{*} y N^{*}$, y es que la libre competencia conduce a un mayor número de bancos.\\
+   Consecuentemente, hay potencialmente alguna gamma de políticas de intervención. La pregunta es: ¿qué tipo de regulación es apropiada?.\\
+   Solicitar un encaje implicaría la reducción de r lo cual no tiene efecto sobre el número de bancos de equilibrio.\\ 
+   Otra medida que reprima el número de bancos (Restricción de parte relacionada, requerimientos de capital etc. ) podría mejorar el bienestar 
+   siempre y cuando todo el mercado siga siendo servido. 
+\end{frame}
+
+
+
+\begin{frame}
+    \frametitle{{\normalsize El impacto sobre la regulación en la tasa de depósitos sobre la tasa de crédito} {}}
+    
+    Bajo una función de costos separables, la regulación sobre la tasa de depósitos no tiene efecto alguno sobre la tasa de créditos. Esta es la hipótesis que estudian \cite{Chiappori1995} sobre el modelo de \cite{Salop1979} el cual se extiende con los siguientes supuestos
+     \begin{block} {Extensión del modelo}
+        \begin{description}
+           \item[Supuesto 6]  Considere que los depositantes son a la vez prestadores, su demanda de crédito individual es inelastica y $L<1$ 
+                      
+        \end{description}
+        
+    \end{block}	
+    Entonces, La utilidad neta del depositante demandador de créditos es:
+    \begin{align}
+    U&=(1+r_{D})-\iota_{D}x_{D}-(1+r_{L})L-\iota_{L}x_{L}
+    \end{align} 
+    Donde $x_{D}\;\;y\;\;x_{L}$ son las distancias entre el banco y el agente que realiza el depósito y/o recibe el crédito. $\iota_{D}\;\;y\;\;\iota_{L}$ son los costos de transportes
+     
+\end{frame}
+
+
+
+\begin{frame}
+    \frametitle{{\normalsize El impacto sobre la regulación en la tasa de depósitos sobre la tasa de crédito} {}}
+    Noten que los costos de transportes por los depósitos son diferentes con respecto a los del crédito, debido a que la frecuencia en que se realiza estas transacciones son diferentes, es decir no se realiza de manera simultaneas por un mismo agente; además el agente puede hacer esas transacciones en diferentes bancos. \\
+    Al igual que el modelo base, si todos los bancos se posicionan de manera simétrica en el perímetro del circulo, las tasas de depósitos y créditos son las mismas entre ellos:
+      \begin{align}
+      r_{D}^{e}&=r-\frac{\iota_{D}}{N} \\
+      r_{L}^{e}&=r+\frac{\iota_{L}}{NL} 
+      \end{align} 
+    Dado que la participación de mercado es simétrica los beneficios son:
+     \begin{align}
+     \pi^{e}&=\frac{D(\iota_{D}+\iota_{L})}{n^{2}}
+     \end{align} 
+     El número de bancos activos en el equilibrio de libre entrada, es determinado por la igualdad de los beneficios y el costo de entrada:
+     \begin{align}
+     N^{e}&=\sqrt{\frac{D(\iota_{D}+\iota_{L})}{f}}
+     \end{align} 
+     
+     
+\end{frame}
+
+
+
+\begin{frame}
+    \frametitle{{\normalsize El impacto sobre la regulación en la tasa de depósitos sobre la tasa de crédito} {}}
+   Es fácil ver que los depósitos y créditos tienen precios independientes, si la tasa de depósitos es regulada, no tiene efecto sobre $r_{L}$. Lo único que cambia es que los bancos obtienen más beneficios sobre los depósitos ya que más bancos entran y con ello el bienestar decrece.\\
+   
+    Sin embargo, si a los bancos se les permitiera ofrecer un contrato de exclusividad, es decir los bancos dan créditos sólo si el agente mantiene con ellos sus depósitos, bajo un esquema de libre mercado, ese tipo de contrato no podría surgir.\\
+    No obstante si se prohíbe remunerar los depósitos, los bancos tienen un incentivo de capturar depositantes, por lo cual podría ocasionar una estrategia de subsidiar créditos a cambio de captar a los depositantes.
+  
+  
+  \begin{block} {Resultado}
+      Bajo un esquema de tasa de depósito regulada, los bancos ofrecen un tipo de contrato de baja tasa de crédito con respecto al caso sin regulación. Así que la regulación es efectiva ya que conduce a menores tasas de créditos. Si la tasa de depósito regulada es mantenida, una regulación sobre el tipo de contrato decrece el bienestar. 
+      
+  \end{block}	
+
+  
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]
+    \frametitle{{\large 
+            Bibliografía}}
+    \renewcommand{\refname}{Referencias}
+    \bibliography{Biblioteca}
+    \bibliographystyle{flexbib}
+\end{frame}
+
+\end{document}

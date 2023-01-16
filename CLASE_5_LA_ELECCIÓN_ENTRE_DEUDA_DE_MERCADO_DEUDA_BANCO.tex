@@ -1,0 +1,173 @@
+\documentclass[10pt, xcolor=table, x11names]{beamer}
+\usepackage[spanish]{babel} %CORTE DE PALABRAS RESPETANDO EL IDIOMA ESPAÑOL.
+\usepackage[Utf8]{inputenc} %acentos desde el teclado
+\usepackage	{textpos}
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning} 
+\usefonttheme{professionalfonts} % fuentes de LaTeX\epsilon
+\usetheme{Boadilla}      % or try Darmstadt, Madrid, Warsaw, ...
+\usecolortheme[RGB={130,130,190}]{structure} % or try albatross, beaver, crane, ...
+\useinnertheme{rounded}
+%\useoutertheme{shadow}
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamertemplate{navigation symbols}{}
+\setbeamercovered{transparent} % Velos
+\setbeamertemplate{caption}[numbered]
+\usepackage[spanish, authoryear, roud, datebegin]{flexbib} %CITAS BIBLIOGRÁFICAS
+\newtheorem{Teorema}{Teorema}
+\usepackage{ragged2e}
+\justifying
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[x11names,table]{xcolor}
+\usepackage[pdftex]{graphicx}
+\usepackage{epstopdf} % Convertir .eps a .pdf (si fuera necesario)
+\DeclareGraphicsExtensions{.pdf,.png,.jpg, .eps} % busca en este orden!
+\title[]{ROL DE LOS INTERMEDIARIOS FINANCIEROS: La elección entre deuda con el mercado o deuda con los bancos}
+\author[Luis Ortiz]{Luis Ortiz Cevallos}
+\institute[SECMCA]{\bf SECMCA}
+\date[\today]{\footnotesize \today}
+\usepackage[pdftex]{hyperref}
+   \hypersetup{colorlinks,%
+	citecolor=blue,%
+	filecolor=blue,%
+	linkcolor=blue,%
+	urlcolor=blue,%
+	pdftex}
+
+\begin{document}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{{\normalsize INTRODUCCIÓN} {}}
+El crédito bancario tiene la cualidad de la \textit{Unicidad} concepto dado por \cite{James1987}, quien notó que el mercado reacciona de manera positiva ante una firma cuando se da cuenta que sus proyectos son financiados en alguna cuota por los bancos.\\
+
+Sin embargo, en los últimos años ha crecido el financiamiento de las firmas de manera directa (proceso de des-intermediación), especialmente entre firmas grandes.\\
+En la práctica, la deuda directa es menos costosa que la indirecta, dado que el crédito sólo es buscado por aquellas firmas que no pueden acceder al mercado de deuda directa.\\
+Por tanto el objetivo de explicar la coexistencia de estas dos modalidades de financiamiento se ha basado en el problema de \textit{moral hazard}, la idea es evitar aquellas firmas que no cuenten con el suficiente activo para obtener el financiamiento de manera directa.
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize UN SIMPLE MODELO DEL MERCADO DE CRÉDITO CON MORAL HAZARD} {}}
+    
+    \begin{block} {Estructura básica del modelo}
+        \begin{description}
+            \item[Supuesto 1] Las firmas buscan inversionistas para proyectos cuya inversión sea de costos fijos normalizados en 1.
+            \item[Supuesto 2] La tasa libre de riesgo está normalizada a 0 ($r=0$). 
+            \item[Supuesto 3] Las firmas tienen que escoger entre los siguientes proyectos:
+            \begin{enumerate}
+               \item \textit{Tecnología buena.} la cual produce un suceso G con una probabilidad de $\pi_{G} $ y cero en el otro caso.
+               \item \textit{Tecnología mala.} la cual produce un suceso B con una probabilidad de $\pi_{B} $ y cero en el otro caso.
+            \end{enumerate}
+            \item[Supuesto 4] Sólo los buenos proyectos tienen un valor presente neto positivo. Es de notar que: $\pi_{G}G>1>\pi_{B}B $, pero $B>G\rightarrow \pi_{G}>\pi_{B} $; esto último significa que a mayor rentabilidad menor probabilidad de ocurrencia. 
+           
+             
+            \end{description}
+        
+    \end{block}	
+    
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{{\normalsize UN SIMPLE MODELO DEL MERCADO DE CRÉDITO CON MORAL HAZARD} {}}
+    
+    \begin{block} {Estructura básica del modelo}
+        \begin{description}
+             \item[Supuesto 5] Asuma que el suceso de la inversión es verificable por externos; pero no la elección de tecnología de las firmas ni su retorno. Por tanto la firma puede hacer una promesa de pago de un monto fijo R sólo en caso se da el suceso de la inversión.
+            \item[Supuesto 6] Las firmas no tienen otra fuente de recursos, así que no paga la promesa en caso la inversión falla.
+            
+        \end{description}
+          
+    \end{block}	
+
+    Es de notar que el valor R del endeudamiento de las firmas determina la elección de la tecnología. Adicionalmente en ausencia de monitoreo, la firma escoge la tecnología buena si y sólo si esta produce un beneficio esperado alto:
+    \begin{align}
+    \pi_{G}(G-R)&>\pi_{B}(B-R) \\
+    ó \nonumber \\
+    R<R_{C}&=\frac{\pi_{G}G-\pi_{B}B}{\pi_{G}-\pi_{B}}    
+    \end{align}
+    Donde $R_{C}$ denota el valor crítico de la deuda nominal con la cual si R es mayor que $R_{C}$ la firma escoge la mala tecnología. 
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize UN SIMPLE MODELO DEL MERCADO DE CRÉDITO CON MORAL HAZARD} {}}
+ Desde el punto de vista de la firma que toma el crédito, la probabilidad de pagar dicho compromiso depende de R:
+ 
+ \[\pi(R)=\left\{ \begin{array}{rcl}
+ \pi(G) & \mbox{si} & R\leq R_{C}\\
+ & & \\
+ \pi(B) & \mbox{si} & R > R_{C}\\
+ \end{array}
+ \right. \] 
+
+En ausencia de monitoreo, el equilibrio competitivo del mercado de crédito se obtiene un R tal que:
+  \begin{align}
+  \pi(R)R=1
+  \end{align}    
+Ya que $\pi_{B}R<1$ para todo $R\leq B$. El equilibrio es solo posible cuando la tecnología buena es implementada, implicando que  $R<R_{C}$ y $\pi_{G}R_{C}\geq 1$ esto sólo se satisface si el moral hazard no es muy importante.\\
+Si  $\pi_{G}R_{C}<1$, el equilibrio implica una ausencia de comercio y por tanto el mercado de crédito colapsa, dado que los proyectos buenos no son financiado y los malos tienen un valor presente neto esperado negativo.
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize UN SIMPLE MODELO DEL MERCADO DE CRÉDITO CON MORAL HAZARD} {}}
+   Introduciendo una tecnología de monitoreo:\\
+   Con un costo C un banco puede prevenir a las firmas a utilizar la mala tecnología- Suponiendo competencia perfecta entre bancos, el valor nominal de los créditos bancarios en equilibrio (denotado por $R_{m}$ donde m denota al monitor) está dada por la condición de quiebre:
+   \begin{align}
+   \pi_{G}R_{m}&=1+C
+   \end{align}   
+    Para que el crédito bancario se encuentre en equilibrio, dos condiciones son necesarias:
+    \begin{enumerate}
+        \item El reembolso nominal del crédito bancario en equilibrio tiene que ser menor que el retorno G que reciben las firmas. Ello es equivalente a:
+        \begin{align}
+        \pi_{G}G-1&>C
+        \end{align} 
+        Es decir que el costo de monitoreo tiene que ser menor al valor presente neto del proyecto bueno 
+        \item El financiamiento directo, el cual es menos costoso, tiene que ser imposible
+        \begin{align}
+        \pi_{G}R_{C}&<1
+        \end{align} 
+    \end{enumerate}
+  
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{{\normalsize UN SIMPLE MODELO DEL MERCADO DE CRÉDITO CON MORAL HAZARD} {}}
+   Así el crédito bancario aparece en equilibrio para valores intermedios en probabilidad
+    \begin{align}
+    \pi_{G}(\pi_{G} \in \left[\frac{1+C}{G},\; \frac{1}{R_{C}}\right] )\nonumber
+    \end{align} 
+    el cual es un intervalo que no es vacío. Por lo que se debe de establecer lo siguiente:
+\begin{block} {Resultado} 
+    Suponga que el costo de monitores es los suficientemente pequeño que $\frac{1}{R_{C}}>\frac{1+C}{G} $. Entonces hay tres posibles regímenes de mercado de crédito de equilibrio:
+\begin{enumerate}
+    \item Si $\pi_{G}>\frac{1}{R_{C}}$ suceso altamente probable, las firmas piden prestado a los bancos a una tasa: $R_{1}=\frac{1}{\pi_{G}}$.
+    \item  Si $\pi_{G}\in \left[\frac{1+C}{G},\; \frac{1}{R_{C}}\right] $ suceso medianamente probable, las firmas piden prestado a los bancos a una tasa: $R_{2}=\frac{1+C}{\pi_{G}}$. 
+    \item  Si $\pi_{G} < \frac{1+C}{G} $ suceso poco probable, el mercado de crédito colapsa.
+\end{enumerate}    
+\end{block}    
+
+\end{frame}
+
+
+	\begin{frame}[allowframebreaks]
+    \frametitle{{\large 
+            Bibliografía}}
+    \renewcommand{\refname}{Referencias}
+    \bibliography{Biblioteca}
+    \bibliographystyle{flexbib}
+\end{frame}
+
+
+
+\end{document}

@@ -1,0 +1,123 @@
+\documentclass[10pt, xcolor=table, x11names]{beamer}
+\usepackage[spanish]{babel} %CORTE DE PALABRAS RESPETANDO EL IDIOMA ESPAÑOL.
+\usepackage[Utf8]{inputenc} %acentos desde el teclado
+\usepackage	{textpos}
+\usefonttheme{professionalfonts} % fuentes de LaTeX
+\usetheme{Boadilla}      % or try Darmstadt, Madrid, Warsaw, ...
+\usecolortheme[RGB={130,130,190}]{structure} % or try albatross, beaver, crane, ...
+\useinnertheme{rounded}
+%\useoutertheme{shadow}
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamertemplate{navigation symbols}{}
+\setbeamercovered{transparent} % Velos
+\setbeamertemplate{caption}[numbered]
+\usepackage[spanish, authoryear, roud, datebegin]{flexbib} %CITAS BIBLIOGRÁFICAS
+\newtheorem{Teorema}{Teorema}
+\usepackage{ragged2e}
+\justifying
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[x11names,table]{xcolor}
+\usepackage[pdftex]{graphicx}
+\usepackage{epstopdf} % Convertir .eps a .pdf (si fuera necesario)
+\DeclareGraphicsExtensions{.pdf,.png,.jpg, .eps} % busca en este orden!
+\title[AVERSIÓN AL RIESGO]{AVERSIÓN AL RIESGO}
+\author[Luis Ortiz]{Luis Ortiz Cevallos}
+\institute[U]{\bf UNIVERSIDAD}
+\date[\today]{\footnotesize \today}
+\usepackage[pdftex]{hyperref}
+\usepackage{tikz}
+\usepackage{pstricks}
+\hypersetup{colorlinks,%
+	citecolor=blue,%
+	filecolor=blue,%
+	linkcolor=blue,%
+	urlcolor=blue,%
+	pdftex}
+
+\begin{document}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\begin{frame}[label=1]
+	\frametitle{{\normalsize COMPARANDO LA ADVERSIÓN AL RIESGO} {}}
+
+Sean dos funciones de utilidades: $u_{1}$ y	$u_{2}$, ambas para un mismo nivel de riqueza,  $u_{1}$ corresponde a un sujeto con mayor aversión al riesgo que $u_{2}$. Si al sujeto 1 le desagrada todos los juegos de azar que le desagrade a 2 independientemente del nivel de riqueza inicial, implica que:\\
+Dado \begin{equation}
+\phi (x)=u_{1}(\frac{1}{u_{2}(x)})
+\end{equation}
+Sus propiedades son:
+\begin{enumerate}
+	\item $u_{1}(z)=\phi(u_{2}(z))$; en que $\phi(.) $ es una función que transforma $u_{2}$ en $u_{1}$.
+	\item $u_{1}^{'}(z)=\phi^{'}(u_{2}(z))u_{2}^{'}(z)\rightarrow \phi^{'}=\frac{u_{1}^{'}}{u_{2}^{'}}>0$.
+	\item
+\end{enumerate}
+
+
+\end{frame}
+
+
+\begin{frame}[label=2]
+	\frametitle{{\normalsize COMPARANDO LA ADVERSIÓN AL RIESGO} {}}
+	
+	\begin{align}
+	u_{1}^{''}(z)&=\phi^{''}(u_{2}(z))(u_{2}^{'}(z))^{2}+\phi^{'}(u_{2}(z))u_{2}^{''}(z)\nonumber \\
+	\phi^{''}(u_{2}^{'})^{2}&=u_{1}^{''}-\phi^{'}u_{2}^{''}\nonumber \\
+	\phi^{''}&=\frac{u_{1}^{''}}{(u_{2}^{'})^{2}}-\frac{\phi^{'}u_{2}^{''}}{(u_{2}^{'})^{2}}\nonumber \\
+	\phi^{''}&=\frac{u_{1}^{''}}{(u_{2}^{'})^{2}}+\frac{\phi^{'}}{u_{2}^{'}}A_{2}\nonumber \\
+	\phi^{''}&=\frac{u_{1}^{''}}{(u_{2}^{'})^{2}}+\frac{u_{1}^{'}}{u_{2}^{'}}\frac{1}{u_{2}^{'}}A_{2}\nonumber \\
+	\phi^{''}&=(\frac{u_{1}^{''}}{(u_{2}^{'})^{2}}+\frac{u_{1}^{'}}{u_{2}^{'}}\frac{1}{u_{2}^{'}}A_{2})\frac{1}{u_{1}^{'}}\nonumber\\
+	\phi^{''}&=-A_{1}\frac{1}{(u_{2}^{'})^{2}}+\frac{1}{(u_{2}^{'})^{2}}A_{2}\nonumber  \\
+	\phi^{''}&=\frac{1}{(u_{2}^{'})^{2}}(A_{2}-A_{1})<0\rightarrow A_{1}>A_{2} \nonumber  
+	\end{align}
+	
+	
+\end{frame}
+
+\begin{frame}[label=3]
+	\frametitle{{\normalsize COMPARANDO LA ADVERSIÓN AL RIESGO} {}}
+	
+	Una cuarta propiedad es que al considerar un riesgo $\tilde{x}$ que le sea desagradable a $u_{2}$ tenemos que:
+	\begin{align}
+	 Eu_{2}(w_{0}+\tilde{x})&\leq Eu_{2}(w_{0})\nonumber 
+	 \end{align}
+	Lo que implique que para el sujeto 1:
+	\begin{align}
+	Eu_{1}(w_{0}+\tilde{x})&= E\phi(u_{2}(w_{0}+\tilde{x}))\leq \phi(Eu_{2}(w_{0}+\tilde{x}))\leq\phi (u_{2}(w_{0}) )=u_{1}(w_{0})\nonumber 
+	\end{align}
+	
+\end{frame}
+
+
+\begin{frame}[label=4]
+	\frametitle{{\normalsize COMPARANDO LA ADVERSIÓN AL RIESGO} {}}
+	
+	Una quinta propiedad se observa al incorporar una prima de riesgo $\pi$, la cual es la cantidad que uno está dispuesto a pagar para evitar un riesgo de media cero, de manera que:
+	\begin{align}
+       Eu(w_{0}+\tilde{x})=u(w_{0}-\pi)
+	\end{align}
+	Si definimos:
+		\begin{align}
+		z&=w_{0}-\pi\nonumber\\
+		\tilde{y}&=\pi+\tilde{x}\nonumber
+		\end{align}
+Podemos reescribir 	2 como:
+	\begin{align}
+	Eu(z+\tilde{y})=u(z)
+	\end{align}
+Ahora si definimos $\pi_{2}$ como la prima de riesgo que paga el sujeto 2, y en base a ello definimos $\tilde{y}_{2}\; \wedge \;  z_{2}$ tenemos que:
+\begin{align}
+Eu_{2}(z_{2}+\tilde{y}_{2})=u_{2}(z_{2})\nonumber 
+\end{align}	
+Y como el sujeto 1 es más adverso al riesgo tenemos:
+\begin{align}
+Eu_{1}(z_{2}+\tilde{y}_{2})\leq u_{1}(z_{2})\nonumber 
+\end{align}	
+Noten que $z_{2}>z_{1}$ y por tanto $ \pi_{1}\geq \pi_{2}$.
+
+\end{frame}
+\end{document}

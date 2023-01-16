@@ -1,0 +1,200 @@
+\documentclass[10pt, xcolor=table, x11names]{beamer}
+\usepackage[spanish]{babel} %CORTE DE PALABRAS RESPETANDO EL IDIOMA ESPAÑOL.
+\usepackage[Utf8]{inputenc} %acentos desde el teclado
+\usepackage	{textpos}
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning} 
+\usefonttheme{professionalfonts} % fuentes de LaTeX\epsilon
+\usetheme{Boadilla}      % or try Darmstadt, Madrid, Warsaw, ...
+\usecolortheme[RGB={130,130,190}]{structure} % or try albatross, beaver, crane, ...
+\useinnertheme{rounded}
+%\useoutertheme{shadow}
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamertemplate{navigation symbols}{}
+\setbeamercovered{transparent} % Velos
+\setbeamertemplate{caption}[numbered]
+\usepackage[spanish, authoryear, roud, datebegin]{flexbib} %CITAS BIBLIOGRÁFICAS
+\newtheorem{Teorema}{Teorema}
+\usepackage{ragged2e}
+\justifying
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[x11names,table]{xcolor}
+\usepackage[pdftex]{graphicx}
+\usepackage{epstopdf} % Convertir .eps a .pdf (si fuera necesario)
+\DeclareGraphicsExtensions{.pdf,.png,.jpg, .eps} % busca en este orden!
+\title[]{Intermediación Financiera como delegación del monitoreo}
+\author[Luis Ortiz]{Luis Ortiz Cevallos}
+\institute[SECMCA]{\bf SECMCA}
+\date[\today]{\footnotesize \today}
+\usepackage[pdftex]{hyperref}
+   \hypersetup{colorlinks,%
+	citecolor=blue,%
+	filecolor=blue,%
+	linkcolor=blue,%
+	urlcolor=blue,%
+	pdftex}
+
+\begin{document}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{{\normalsize INTRODUCCIÓN} {}}
+En el contexto de información asimétrica el monitoreo sería una forma para mejorar la eficiencia.\\
+Siguiendo a Hellwig (1991) el monitoreo en el sentido amplio significa:
+\begin{itemize}
+    \item Filtrar proyectos en contexto de selección adversa (\cite{Broecker1990}) 
+    \item Previniendo el comportamiento oportunistas de las firmas (moral hazard) \cite{Tirole1997} 
+    \item Castigando o auditando a una firma o banco que incumpla una obligación contractual \cite{Diamond1984}
+\end{itemize}    
+  
+La idea central es que los bancos tienen una \textbf{ventaja comparativa} en el monitoreo de esa actividad. Esta ventaja puede deberse a:
+\begin{itemize}
+    \item Economía de escala en el monitoreo\\
+    \item Pequeña capacidad de los inversionistas en relación al monto de inversión del proyecto
+    \item Bajo costo de delegar. El costo de monitoreo a si misma de las IF, debe ser menor que el superávit ganado por aprovechar la economía de escala en el monitoreo de los proyectos.
+\end{itemize} 
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize Intermediación Financiera como delegación del monitoreo} {}}
+    
+    \begin{block} {Estructura básica del modelo}
+        \begin{description}
+            \item[Supuesto 1] Consideramos una economía con $n$ firmas.
+            \item[Supuesto 2] Cada una de las firmas cuentan con un proyecto riesgoso, el cual requiere una inversión de costo fijo normalizado en 1. 
+            \item[Supuesto 3] El retorno de cada firma es idéntico e independientemente distribuido.  
+            \item[Supuesto 4]  Las firmas son neutrales al riesgo.
+            \item[Supuesto 5] Cada flujo $\hat{y}$ que la firma obtiene por su inversión es inobservable para los inversionistas.
+            \end{description}
+        
+    \end{block}	
+    
+\end{frame}
+
+
+
+
+
+\begin{frame}
+    \frametitle{{\normalsize Intermediación Financiera como delegación del monitoreo} {}}
+    
+     \begin{block} {Estructura básica del modelo}
+        \begin{description}
+            \item[Supuesto 6] Pagando una cuota $K$ por el costo de monitoreo los inversionistas pueden observar el flujo de efectivo del proyecto y hacer cumplir el contrato del crédito pagando $\hat{y} $. Por tanto los inversionistas tienen una rentabilidad de:
+            \begin{align}
+            E(\hat{y})>1+r+K
+            \end{align}
+            Donde r es la tasa libre de riesgo.
+            \item[Supuesto 7] Suponga que cada inversionista sólo puede financiar una fracción $\frac{1}{m}$ de cada proyecto. Para financiar todos los proyectos se requieren $n*m$ inversionistas. Así que el financiar esos proyectos implicaría un costo de monitoreo total de $ n*m*K$
+           \end{description}
+       
+      
+       
+     \end{block}	
+ 
+
+ 
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{{\normalsize Intermediación Financiera como delegación del monitoreo} {}}
+   
+    En este contexto si los bancos surgen, cada inversor debe de pagarle el costo de monitoreo al banco y el banco por su parte pagar el costo de monitoreo de cada firma. Es decir que el costo total de monitoreo sería:
+    \begin{align}
+    n*K+n*m*K
+    \end{align}
+     \begin{block} {Conclusión}
+     La aparición de los bancos, provoca un costo adicional relacionado al nuevo eslabón en el proceso de monitoreo, agravando la ineficiencia. \\
+     La idea de \cite{Diamond1984} es que los incentivos de los bancos sea provisto por una alternativa tecnológica: La auditoría.   
+    \end{block}
+    
+    
+   
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize Tecnología de la auditoría} {}}
+    
+    Incentivar a los bancos a no responder a un mismo tiempo a todos los depósitos dependerá de que éstos no cierren o caigan en bancarrota. \\
+    Los bancos prometen un tasa fija por cada depósito ($r_{D}$)  además el banco es auditado sólo si el retorno de los activos del banco no es suficiente para cumplir su promesa.
+    El costo por la auditoría tiene la ventaja de ser fija e independiente del número de inversores y está dada por:
+    \begin{align}
+    C_{n}&=n\gamma Pr(\hat{y}_{1}+\hat{y}_{2}+\cdot+\hat{y}_{n}<(1+r_{D})n),
+    \end{align}
+    Donde $\gamma$ es el costo de unidad auditada. Asumimos que el costo de auditoría es proporcional al volumen de activos y que se cumple $K<C$, lo que significa que si una firma tiene un proyecto capaz de financiarse por un sólo inversionista  es eficiente la opción del monitoreo directo. 
+    
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{{\normalsize Tecnología de la auditoría} {}}
+    
+    Si un banco surge, debe de elegir su propia tecnología de monitoreo tanto para sus créditos como para su depósitos. En el caso de los crédito hay dos tecnologías de monitoreo siendo sus costos respectivos:
+    \begin{enumerate}
+        \item n*K en el caso en que monitoree directamente cada proyecto
+        \item n*C en el caso tenga que pagar el costo de soportar una auditoría directa.
+    \end{enumerate}
+    Entre ambos casos el menor costo es el del monitoreo directo. Por tanto el banco es un monitor delegado sobre las firmas en nombre de los inversores. \\
+    El nivel de equilibrio de $r_{b} $ y el costo esperado de la auditoria dependerá de n. Estos son determinados implícitamente por:
+    \begin{align}
+    E(\min(\frac{1}{n}\sum_{i=1}^{n}\hat{y}_{i}-K,\; \; 1+r_{D}^{n}))&=1+r \\
+    C_{n}&=n\gamma Pr(\frac{1}{n}\sum_{i=1}^{n}\hat{y}_{i}-K<(1+r_{D}^{n}))
+    \end{align}
+    
+    Noten que $\frac{1}{n}\sum_{i=1}^{n}\hat{y}_{i}-K $ es el retorno neto de los activos bancarios. Por tanto la situación de delegar el monitoreo al banco será más eficiente que el monitoreo lo haga cada inversionista, si y sólo si se cumple:
+    \begin{align}
+    nK+C_{n}<n*m*K
+    \end{align}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize Tecnología de la auditoría} {}}
+    \begin{block} {Implicaciones 1. (\cite{Diamond1984})}
+       Si el monitoreo es eficiente $(K<C)$, los inversores son pequeños $(m>1) $ y el beneficio de la inversión es $ E(\hat{y})>1+r+k$. El monitoreo por los bancos domina sobre el monitoreo por los inversionistas en la medida n sea más grande (diversificación). 
+    \end{block}
+   Comprobación. Dado:
+    \begin{align}
+   nK+C_{n}<n*m*K \nonumber\\
+   K+\frac{C_{n}}{n}<m*K\nonumber\\
+   \lim_{n\rightarrow\propto}\frac{C_{n}}{n}&\approx 0
+   \end{align}
+    Además por la ley de los grandes números: $\frac{1}{n}\sum_{i=1}^{n}\hat{y}_{i} $ converge a $E(hat{y})$ y dado que $ E(\hat{y})>1+r+k$, entonces por 4, tenemos que:
+     \begin{align}
+    \lim_{n\rightarrow\propto}r_{D}^{n}&\approx r
+    \end{align}
+    Los depósitos son una inversión sin riesgo.
+   
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize Tecnología de la auditoría} {}}
+    En conclusión se debe cumplir que:
+    \begin{align}
+    \lim_{n\rightarrow\propto}\frac{C_{n}}{n}&=\lim_{n\rightarrow\propto}Pr(\frac{1}{n}\sum_{i=1}^{n}\hat{y}_{i}-k<1+r_{D}^{n})=\lim_{n\rightarrow\propto}Pr(E(\hat{y})-k<1+r)\approx 0
+    \end{align}
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]
+    \frametitle{{\large 
+            Bibliografía}}
+    \renewcommand{\refname}{Referencias}
+    \bibliography{Biblioteca}
+    \bibliographystyle{flexbib}
+\end{frame}
+
+
+
+\end{document}

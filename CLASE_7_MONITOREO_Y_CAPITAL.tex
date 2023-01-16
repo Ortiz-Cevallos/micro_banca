@@ -1,0 +1,265 @@
+ \documentclass[10pt, xcolor=table, x11names]{beamer}
+\usepackage[spanish]{babel} %CORTE DE PALABRAS RESPETANDO EL IDIOMA ESPAÑOL.
+\usepackage[Utf8]{inputenc} %acentos desde el teclado
+\usepackage	{textpos}
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning} 
+\usefonttheme{professionalfonts} % fuentes de LaTeX\epsilon
+\usetheme{Boadilla}      % or try Darmstadt, Madrid, Warsaw, ...
+\usecolortheme[RGB={130,130,190}]{structure} % or try albatross, beaver, crane, ...
+\useinnertheme{rounded}
+%\useoutertheme{shadow}
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamertemplate{navigation symbols}{}
+\setbeamercovered{transparent} % Velos
+\setbeamertemplate{caption}[numbered]
+\usepackage[spanish, authoryear, roud, datebegin]{flexbib} %CITAS BIBLIOGRÁFICAS
+\newtheorem{Teorema}{Teorema}
+\usepackage{ragged2e}
+\justifying
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[x11names,table]{xcolor}
+\usepackage[pdftex]{graphicx}
+\usepackage{epstopdf} % Convertir .eps a .pdf (si fuera necesario)
+\DeclareGraphicsExtensions{.pdf,.png,.jpg, .eps} % busca en este orden!
+\title[]{ROL DE LOS INTERMEDIARIOS FINANCIEROS: MONITOREO Y CAPITAL}
+\author[Luis Ortiz]{Luis Ortiz Cevallos}
+\institute[SECMCA]{\bf SECMCA}
+\date[\today]{\footnotesize \today}
+\usepackage[pdftex]{hyperref}
+   \hypersetup{colorlinks,%
+	citecolor=blue,%
+	filecolor=blue,%
+	linkcolor=blue,%
+	urlcolor=blue,%
+	pdftex}
+
+\begin{document}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{{\normalsize INTRODUCCIÓN} {}}
+Basados en  \cite{Tirole1997} se considera un modelo que captura la noción de sustitutabilidad entre capital y monitoreo, tanto a nivel de las firmas como a nivel de los bancos. Ello se obtiene delegando el monitoreo sin una completa diversificación. \\
+El moral hazard en el nivel de bancos es solucionado por el capital bancario. A la vez se asume una perfecta correlación entre los proyectos financiados por los bancos.\\
+
+
+
+ 
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize MONITOREO Y CAPITAL} {}}
+    
+    \begin{block} {Estructura básica del modelo}
+        \begin{description}
+            \item[Supuesto 1]  Una economía con tres tipos de agentes:
+            \begin{enumerate}
+                \item Las firmas (prestadores) representado por el índice f.
+                \item El monitor (bancos) representado por el índice m.
+                \item El inversor desinformado (depositador) representado por el índice u.
+            \end{enumerate}  
+            \item[Supuesto 2] Cada proyecto de inversión tiene un costo I y un retorno y el cual es verificable en caso suceda. 
+            \item[Supuesto 3] Hay dos tipos de proyectos:
+            \begin{enumerate}
+               \item \textit{Buen proyecto} con alta probabilidad de suceso $p_{H}$.
+               \item \textit{Mal proyecto} con baja probabilidad de suceso $p_{L}$ ($\Delta p= p_{H}-p_{L}$). 
+            \end{enumerate}
+            \item[Supuesto 4] Los malos proyectos dan un beneficio privado (B) a los prestadores siendo ése la fuente del moral hazard.
+            
+           
+             
+            \end{description}
+        
+    \end{block}	
+    
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{{\normalsize MONITOREO Y CAPITAL} {}}
+    
+    \begin{block} {Estructura básica del modelo}
+        \begin{description}
+             \item[Supuesto 5] Ser una firma monitoreada implica una reducción de los beneficios desde B hasta b por el costo del monitoreo C.
+            \item[Supuesto 6] Los inversores son neutral al riesgo, no están informados, no tienen acceso a monitorear las firmas y tienen acceso a una alternativa de inversión que les redime un retorno bruto esperado de $1+r$.
+           \item[Supuesto 7] Los buenos proyectos tienen un valor presente neto esperado positivo, sólo si los beneficios privados de las firmas son incluidos: $p_{H}y>1+r>p_{L}y+B $
+           \item[Supuesto 8] Las firmas difieren entre ellas sólo por su nivel de capital A, el cual es observable. La distribución del capital es un continuo entre la población de firmas y está dado por la función acumulativa $G()$.
+            \item[Supuesto 9] El capital de los bancos es exógeno. Dado esto se asumirá que los activo de los bancos están perfectamente correlacionados con un único parámetro relevante que es el Capital total de la industria bancaria $K_{m}$ y que determina a la vez la capacidad de crédito de la industria.  
+        \end{description}
+          
+    \end{block}	
+
+   \end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize OPCIONES DE FINANCIAMIENTO: FINANCIAMIENTO DIRECTO} {}}
+
+ Una firma puede financiarse directamente de los inversores desinformados prometiendoles un retorno $R_{u}$ en caso el proyecto suceda  a cambio de I. Si las firmas seleccionaran siempre el proyecto bueno tendríamos el borde superior de $R_{u}$:
+ \begin{align}
+ p_{H}(y-R_{u})&\geq p_{L}(y-R_{u})+B\leftrightarrow R_{u}\leq y-\frac{B}{\Delta p}
+ \end{align}
+ Las restricciones de la racionalidad individual de los inversores dado que no son uniformes implica un borde superior de $I_{u}$:
+ \begin{align}
+ p_{H}R_{u}&\geq (1+r)I_{u}\rightarrow I_{u}\leq \frac{p_{H}}{1+r}(y-\frac{B}{\Delta p})
+ \end{align}
+ Así que el proyecto puede ser financiado sólo si la firma tiene suficiente capital:
+ \begin{align}
+ A+I_{u}&\geq I \rightarrow A \geq \hat{A}(r) 
+ \end{align}
+ Donde se define $\hat{A}(r)$ como $I-\frac{p_{H}}{1+r}(y-\frac{B}{\Delta p})$
+ 
+ \end{frame}
+
+
+\begin{frame}
+    \frametitle{{\normalsize OPCIONES DE FINANCIAMIENTO: FINANCIAMIENTO INDIRECTO} {}}
+    
+   Si la firma no tiene suficiente capital para emitir deuda de manera directa, puede financiarse en $I_{m}$ de los bancos a los cuales les promete un retorno de $R_{m}$ en caso se de el suceso del proyecto; o bien podría financiarse de manera directa de $I_{u}$ de los inversores desinformados y prometer $R_{u}$ si el proyecto sucede. Por tanto el incentivo de comparabilidad entre restricciones de la firma viene dado por:
+    \begin{align}
+   p_{H}(y-R_{u}-R_{m})&\geq p_{L}(y-R_{u}-R_{m})+b\leftrightarrow R_{u}+R_{m}\leq y-\frac{b}{\Delta p} 
+    \end{align}
+    Los bancos también deberían tener incentivos para hacer el monitoreo;
+     \begin{align}
+    p_{H}R_{m}-C\geq p_{L}R_{m}\leftrightarrow R_{m}\geq \frac{C}{\Delta p}
+    \end{align}
+    Ya que el financiamiento bancario es siempre más caro que el financiamiento directo, las firmas prestan lo menos posible a los bancos:
+     \begin{align}
+    I_{m}&=I_{m}(\beta)
+    \end{align}
+    Donde se define $I_{m}(\beta)$ como $\frac{p_{H}R_{m}}{\beta}= \frac{p_{H}C}{\beta \Delta p}$
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize OPCIONES DE FINANCIAMIENTO: FINANCIAMIENTO INDIRECTO} {}}
+       Donde $\beta$ denota la tasa esperada de retorno que es demandada por los bancos. La firma podrían obtener el resto de los inversores desinformados.
+    \begin{align}
+    I_{u}=\frac{p_{H}R_{u}}{1+r}
+    \end{align}
+    Así que dada la restricción 5 es unida a 4
+     \begin{align}
+     R_{u}\leq y-\frac{b+C}{\Delta p}
+     \end{align}
+    Lo cual implica que:
+    \begin{align}
+    I_{u}\leq\frac{p_{H}}{1+r}(y-\frac{b+C}{\Delta p})
+    \end{align}
+    De manera que el proyecto puede financiarse si y sólo si:
+    \begin{align}
+    A+I_{u}+I_{m}\geq I\rightarrow A\geq A^{*}(\beta, r)
+    \end{align}
+   Donde se define $A^{*}(\beta, r)$ como $1-I_{m}(\beta)-\frac{p_{H}}{1+r}(y-\frac{b+C}{\Delta p})$
+   
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize OPCIONES DE FINANCIAMIENTO: FINANCIAMIENTO INDIRECTO} {}}
+    Finalmente la tasa de retorno $\beta$ está dado por el equilibrio entre la oferta y demanda del capital bancario:
+    \begin{align}
+    K_{m}=\left[G(\hat{A}(r))-G(A^{*}(\beta, r)) \right] I_{m}(\beta)
+    \end{align}
+    
+    Donde $K_{m}$ denota el capital total de la industria bancaria, $G(\hat{A}(r))-G(A^{*}(\beta, r)$ representa el número (proporción) de las firmas que obtienen créditos y $I_{m}(\beta)$ representa el tamaño del crédito. Noten que el lado derecho de 11 es una función decreciente de $\beta$ y el equilibrio es único. 
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize OPCIONES DE FINANCIAMIENTO: FINANCIAMIENTO INDIRECTO} {}}
+    \begin{block} {Resultado}
+        \begin{itemize}
+            \item  En equilibrio sólo las empresas bien capitalizadas ($A\geq \hat{A} $) podrán emitir deuda de manera directa.
+            \item  Las firmas con capitalización intermedio ($A^{*}(\beta, r) < A < \hat{A} $) prestarán a los bancos.
+            \item Y las firmas subcapitalizadas ($ A \leq A^{*}(\beta, r) $)  no podrán invertir.
+        \end{itemize}
+      \end{block}
+  
+   El valor de equilibrio de r (la tasa sin riesgo) y $\beta $ (el retorno bruto de los créditos bancarios), están determinados por dos condiciones:
+  \begin{itemize}
+      \item La ecuación de equilibrio del mercado del capital bancario (11).
+      \item La ecuación de equilibrio sobre el mercado financiero, en la que la oferta de ahorro S(r) iguala a la demanda de fondos $D(\beta, r, C)$-
+    \begin{align}
+   D(\beta, r, C)&=\int_{A(\beta, r)}^{\hat{A}(r)}(I-I_{m}-A)dG(A)+\int_{\hat{A}(r)}^{\hat{A}}(I-A)dG(A)
+   \end{align}   
+      
+  \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{{\normalsize OPCIONES DE FINANCIAMIENTO: FINANCIAMIENTO INDIRECTO} {}}
+ \begin{tikzpicture}
+% define normal distribution function 'normaltwo'
+\def\normaltwo{\x,{4*1/exp(((\x)^2)/2)}}
+% input y parameter
+\def\y{2.0}
+\def\z{3.95}
+\def\w{6.0}
+% this line calculates f(y)
+\def\fy{4*1/exp(((\y-3)^2)/2)}
+\def\fz{4*1/exp(((\z-3)^2)/2)}
+\def\fw{4*1/exp(((\w-3)^2)/2)}
+% Shade orange area underneath curve.
+\fill [fill=green!30] (2.6,0) -- plot[domain=0:6.0] (\normaltwo) -- ({\w},0) -- cycle;
+\fill [fill=yellow!30] (2.6,0) -- plot[domain=0:3.95] (\normaltwo) -- ({\z},0) -- cycle;
+\fill [fill=red!30] (2.6,0) -- plot[domain=0:2.0] (\normaltwo) -- ({\y},0) -- cycle;
+% Draw and label normal distribution function
+\draw[color=blue,domain=0:6] plot (\normaltwo) node[right] {};
+
+% Add dashed line dropping down from normal.
+\draw[dashed] ({\y},{\fy}) -- ({\y},0) node[below] {$A^{*}(\beta, r)$};
+\draw[dashed] ({\z},{\fz}) -- ({\z},0) node[below] {$\hat{A}(r)$};
+
+% Optional: Add axis labels
+\draw (-.2,2.5) node[left] {Densidad};
+\draw (3,-.5) node[below] {Activos de las firmas};
+
+% Optional: Add axes
+\draw[->] (0,0) -- (6.2,0) node[right] {};
+\draw[->] (0,0) -- (0,5) node[above] {};
+
+\node[below] at (1.2,0.5) {Sin};
+\node[below] at (3.0,2.5) {Bancos};
+\node[below] at (4.7,0.5) {Directo};
+\end{tikzpicture}    
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize Extensiones} {}}
+  \cite{Tirole1997} consideran también un modelo más general; con una variable del nivel de inversión. Ellos estudian los efectos de tres tipos de shocks financieros:
+    \begin{itemize}
+        \item Credit crunch, correspondiente a un decrecimiento de $K_{m}$; el capital de la industria bancaria.
+        \item Un colateral squeeze, lo que corresponde a un negativo shock sobre el activo de las firmas.
+        \item Ahorro squeeze, lo que corresponde a un desplazamiento contractivo en la función de ahorro.
+    \end{itemize}
+      A partir de lo cual encuentran los siguiente:
+      \begin{block} {Resultado}
+        Dado que $r$ y $\beta$ representan el retorno de equilibrio del mercado financiero y crédito bancario respectivamente, entonces:
+        \begin{itemize}
+            \item Un credit crunch decrece r y incrementa $\beta$.
+            \item Un colateral squeeze decrece r y  $\beta$.
+            \item Un ahorro squeeze incrementa r y decrece $\beta$.
+        \end{itemize}  
+      \end{block}
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]
+    \frametitle{{\large 
+            Bibliografía}}
+    \renewcommand{\refname}{Referencias}
+    \bibliography{Biblioteca}
+    \bibliographystyle{flexbib}
+\end{frame}
+
+
+
+\end{document}

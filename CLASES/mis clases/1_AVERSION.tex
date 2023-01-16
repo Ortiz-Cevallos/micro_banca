@@ -1,0 +1,109 @@
+\begin{frame}
+\frametitle{Aversión al riesgo y premio de riesgo}
+
+Un individuo se dice que es averso al riesgo si y sólo si:
+\\
+
+\textit{Su función de utilidad es concova, implicando que este sujeto no aceptaría participar en un ``juego justo'' (fair lottery).\\
+     Un ``juego justo'' es definido como aquel cuyo valor esperado es cero.}\\
+
+Un ejemplo:\\
+Supongamos un ``juego justo'' que tiene un pago aleatoria de $ \hat{\epsilon}$, donde:
+
+\[
+\hat{\epsilon}= \left\{ \begin{array}{lcl}
+h_{1} & con\; probabilidad & p \\
+& & \\
+h_{2} & con\; probabilidad & 1-p
+\end{array}
+\right.
+\] 
+
+Por tanto para ser un ``juego justo'' debe cumplirse:
+\begin{align}
+E(\hat{\epsilon})&=ph_{1}+(1-p)h_{2}=0 \nonumber \\
+ph_{1}&=-(1-p)h_{2} \nonumber \\
+\frac{h_{1}}{h_{2}}&=-\frac{(1-p)}{p}\nonumber
+\end{align}    
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Aversión al riesgo y premio de riesgo}
+  Es de notar que si el individuo acepta el ``juego justo'', considerando una función de utilidad esperada a VNM tendría:
+\begin{align}
+V&=E(U(W+\hat{\epsilon}))\nonumber 
+\end{align}    
+ Mientras si no acepta participar en el juego justo tendría:
+ \begin{align}
+ V&=E(U(W))=U(W)\nonumber 
+ \end{align}     
+
+Por tanto un individuo es averso al riesgo si se cumple:
+\begin{align}
+U(W)&> E(U(W+\hat{\epsilon}))=pU(W+h_{1})+(1-p)U(W+h_{2})\nonumber 
+\end{align}  
+  
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Aversión al riesgo y premio de riesgo}
+   Es posible definir el grado de aversión al riesgo de un individuo, para ello definimos el concepto ``premio por riesgo'' que significa la cantidad de un bien que el sujeto está dispuesto a pagar para evitar el riesgo.\\
+   Definiendo $\pi$ como el ``premio por riesgo'' de un individuo dado un ``juego justo'' $\hat{\epsilon}$ de manera que el valor máximo que el individuo estaría dispuesto a pagar para evitar el riesgo estaría dado por:
+   \begin{align}
+   U(W-\pi)&= E(U(W+\hat{\epsilon}))
+   \end{align}  
+   
+    
+\end{frame}
+
+\begin{frame}
+\frametitle{Aversión al riesgo y premio de riesgo}
+Ahora bien, que sucede si suponemos que $\hat{\epsilon}$ es un valor pequeño próximo a cero, por que debemos estudiar sus efectos tomando la aproximación de taylor de la ecuación (1) en torno a $\hat{\epsilon}^{*}=0 $ y $\pi^{*}=0 $.\\
+Expandiendo el lado izquierdo de (1) en torno de $\pi^{*}=0 $ tenemos:
+\begin{align}
+f(x)&\approxeq f(x^{*})+\frac{f'(x^{*})}{1!}(x-x^{*})+\frac{f''(x^{*})}{2!}(x-x^{*})^{2}+\frac{f'''(x^{*})}{3!}(x-x^{*})^{3}+...\nonumber \\
+f(x)&\approxeq f(x^{*})+\frac{f'(x^{*})}{1!}(x-x^{*})\nonumber \\
+U(W-\pi)&\approxeq U(W-\pi^{*})-U'(W-\pi^{*})(\pi-\pi^{*})\nonumber \\
+U(W-\pi)&\approxeq U(W)-\pi U'(W)
+\end{align } 
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Aversión al riesgo y premio de riesgo}
+   Expandiendo el lado derecho de (1) en torno al punto $\hat{\epsilon}^{*}=0 $ tenemos:
+    \begin{align}
+   E(U(W+\hat{\epsilon}))&\approxeq E(U(W+\hat{\epsilon}^{*})+U'(W+\hat{\epsilon}^{*})(\hat{\epsilon}-\hat{\epsilon}^{*})+\frac{1}{2}U''(W+\hat{\epsilon}^{*})(\hat{\epsilon}-\hat{\epsilon}^{*})^{2}) \nonumber \\
+   E(U(W+\hat{\epsilon}))&\approxeq E(U(W)+\hat{\epsilon}U'(W)+\frac{1}{2}\hat{\epsilon}^{2}U''(W))\nonumber \\
+    E(U(W+\hat{\epsilon}))&\approxeq E(U(W))+\frac{1}{2}E(\hat{\epsilon}^{2})E(U''(W))\nonumber \\
+     E(U(W+\hat{\epsilon}))&\approxeq E(U(W))+\frac{1}{2}\sigma^{2}E(U''(W))
+ \end{align} 
+ 
+ Igualando (2) y (3) para obtener $\pi$:
+   \begin{align}
+ U(W)-\pi U'(W)&=U(W)+\frac{1}{2}\sigma^{2}U''(W) \nonumber \\
+ \pi &=-\frac{1}{2}\sigma^{2}\frac{U''(W) }{U'(W) }\nonumber \\
+ \pi &=\frac{1}{2}\sigma^{2} R(W)
+ \end{align} 
+ 
+ 
+  
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Aversión al riesgo y premio de riesgo}
+    De (4) tenemos que R(W) es conocido como el Arrow-Prat medida de aversión aboluta al riesgo.\\
+    
+    \begin{block} {Implicaciones de la ecuación 4}
+       \begin{itemize}
+           \item El premio por riesgo depende de la incertidumbre del activo en riesgo ($\pi $) y de la aversión absoluta al riesgo R(W). 
+           \item Si tanto $U'(W) $ como $\sigma^{2}$ son positivos, para que la prima por riesgo sea positiva la función de utilidad debería ser concava y por tanto  $U''(W) $ ser negativa.
+           \item La concavidad de la función de utilidad de un individuo no es suficiente para que la prima por riesgo sea en una cuantía considerable, ello depende de la aversión absoluta al riesgo, puede haber el caso de un individuo con $U''(W) $ muy grande pero que no esté dispuesto a pagar un alto monto de prima por riesgo debido de tratarse de una persona pobre.
+       \end{itemize} 
+    \end{block}	
+    
+\end{frame}
+

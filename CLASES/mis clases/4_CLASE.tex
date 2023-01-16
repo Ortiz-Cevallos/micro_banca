@@ -1,0 +1,189 @@
+\begin{frame}
+	\frametitle{{\normalsize INTRODUCCIÓN} {}}
+	\setcounter{equation}{0}
+Un supuesto común en los modelos que justifican la existencia de intermediarios financieros es:\\
+\textit{Las firmas están mejor informadas con respecto a los inversionistas sobre la calidad de los proyectos; lo que implica que se esconde cierta información que puede dar lugar al problema de ``selección adversa''.}\\
+Discutiremos que el paradigma de ``selección adversa'' puede generar economía de escala en la actividad bancaria dando lugar a interpretar su justificación como un buró que comparte información.\\
+ 
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize UN SIMPLE MODELO DE MERCADO DE CAPITAL CON SELECCIÓN ADVERSA} {}}
+    
+    \begin{block} {Estructura básica del modelo}
+        \begin{description}
+            \item[Supuesto 1] Consideramos una economía con un gran número de firmas.
+            \item[Supuesto 2] Cada una de las firmas cuentan con un proyecto riesgoso, el cual requiere una inversión de costo fijo normalizado en 1 y tiene un retorno bruto aleatorio de $\hat{R}(\theta)=1+\hat{r}(\theta) $. 
+            \item[Supuesto 3] El retorno neto de la inversión: $\hat{r}(\theta)\sim N(\theta,\sigma^{2}) $.
+            \item[Supuesto 4] $\sigma^{2} $ es el mismo para todos los proyectos pero $ \theta$ difiere entre proyectos; si bien es privadamente observada por la firma, se conoce por todas las firmas su distribución estadística. 
+            \item[Supuesto 5]  El inversor es neutral al riesgo y tiene acceso a una tecnología de almacenamiento.
+            \item[Supuesto 6]  Las firmas están dotadas por una riqueza inicial tal que: $W_{0}>1 $. Ellos están dispuestos a vender el proyecto dado que son adversos al riesgo.
+            \end{description}
+        
+    \end{block}	
+    
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{{\normalsize UN SIMPLE MODELO DE MERCADO DE CAPITAL CON SELECCIÓN ADVERSA} {}}
+    
+    \begin{block} {Estructura básica del modelo}
+        \begin{description}
+           \item[Supuesto 7]  Las preferencias de la firmas se representan por una función de utilidad exponecial Von Neumann-Morgensten: $U(W)=-e^{-\rho W}  $. Donde W denota la riqueza final y $\rho>0$ es el índice absoluta de adversión al riesgo.
+        \end{description}   
+    \end{block}	
+    Es de notar que si $\theta $ son observables, cada firma puede vender su proyecto en el mercado al precio: $P(\theta)=E[\hat{r}(\theta)]=\theta $ y por tanto la riqueza final de cada firmas es de $W_{0}+\theta$.\\
+    \begin{block} {Supuesto adicional clave}
+        \begin{description}
+            \item[Supuesto Clave] Si $\theta$ es una información privada y las firmas no pueden ser diferenciadas por los inversionistas, como en \cite{Akerlof1970}, el precio del proyecto es el mismo entre firmas, y sólo las firmas de bajo expectativas de retornos venderán su proyecto,\\  
+        \end{description}   
+    \end{block}	
+    
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{{\normalsize UN SIMPLE MODELO DE MERCADO DE CAPITAL CON SELECCIÓN ADVERSA} {}}
+  Es de notar que algunas firmas estarán dispuestos a auto financiar sus proyectos, no obstante como son adverso al riesgo pagaran una prima por riesgo ($\varphi$) obteniendo:
+    \begin{align}
+    EU(W_{0}+\hat{r}(\theta))&=U(W_{0}+\theta-\varphi)=U(W_{0}+\theta-\frac{1}{2}\rho\sigma^{2})\nonumber
+    \end{align}
+  En tanto al vender en el mercado las firmas obtienen $ U(W_{0}+P)$; por lo que el empresario se financiará en el mercado según la siguiente condición:
+    \begin{align}
+  \theta<\hat{\theta}&=P+\frac{1}{2}\rho\sigma^{2}
+  \end{align}
+  Esto significa que sólo las firmas con relativamente bajas expectativas de retorno ($\theta<\hat{\theta}$) emitirán deuda. Esto es el problema de ``selección adversa'' al abrir un mercado financiero, los inversionistas sólo pueden seleccionar los peores proyectos pues los mejores ($\theta>\hat{\theta}$)  no participan.
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{{\normalsize MERCADO DE CAPITAL CON SELECCIÓN ADVERSA} {}}
+    En equilibrio el retorno promedio de la deuda emitida por la firmas deberán ser igual a P (debido a que los inversores son neutrales al riesgo).\\
+    \begin{align}
+    P&=E[\theta\mid\theta<\hat{\theta}]
+    \end{align}
+    Es de notar que en este equilibrio se caracterizan por que $(P, \hat{\theta})$ son los que satisfacen las ecuaciones 1 y 2.\\
+    En general este equilibrio es ineficiente, para probarlo suponga que $\theta $ sigue una distribución binomial, los dos estados son: estado bajo con probabilidad $\pi_{1}$ y estado alto con probabilidad $\pi_{2}$. Note que la eficiencia requiere que todos las firmas obtengan el 100\% del financiamiento del mercado; entonces por definición el umbral debe ser: $\hat{\theta}\geq \theta_{2} $ y por tanto el precio de la deuda emitida será:
+    \begin{align}
+    P=E[\theta]&=\pi_{1}\theta_{1}+\pi_{2}\theta_{2} \nonumber
+    \end{align}
+    
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{{\normalsize MERCADO DE CAPITAL CON SELECCIÓN ADVERSA} {}}
+     Entonces utilizando la ecuación 1 tenemos:
+    \begin{align}
+    \pi_{1}\theta_{1}+\pi_{2}\theta_{2}+\frac{1}{2}\rho\sigma^{2}&\geq \theta_{2}\nonumber \\
+    \pi_{1}(\theta_{2}-\theta_{1})\leq\frac{1}{2}\rho\sigma^{2}
+    \end{align}
+    
+    \begin{block} {Conclusión}
+       
+            La ecuación (3) señala que para que todas las firmas acudan al mercado a financiar su proyecto, el premio del riesgo ($\varphi$) debe ser los suficientemente alto para desincentivar la posibilidad de selección adversa, si esta prima por riesgo no es lo suficientemente alta alguna firma preferirá auto-financiarse resultando un equilibrio ineficiente.
+         
+    \end{block}	
+
+   
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{{\normalsize SEÑALIZANDO A TRAVÉS DEL AUTO-FINANCIAMIENTO Y EL COSTO DEL CAPITAL} {}}
+    Cuando la ecuación (3) no se satisface, los empresarios que disponen de un proyecto de buena calidad ($\theta=\theta_{2}$) prefieren auto-financiarse en vez de vender su proyecto a un bajo precio ($P=E(\theta)$). De hecho ellos pueden limitarse a si mismo a financiarse parcialmente y convencer a un inversionista de no financiar los otros proyectos en tanto los otros empresario no están dispuesto a auto-financiarse parcialmente.\\
+    Las empresas que decidan auto-financiar una fracción $\alpha$ del proyecto, dan la señal a los inversores que el proyecto es bueno; siempre y cuando $\alpha$ sea de un nivel   ``considerable''. La condición  ``no imitada'' es: 
+       \begin{align}
+      U(W_{0}+\theta_{1})&\geq EU(W_{0}+(1-\alpha)\theta_{2}+\alpha\hat{r(\theta_{1})}) 
+      \end{align}  
+       
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{{\normalsize SEÑALIZANDO A TRAVÉS DEL AUTO-FINANCIAMIENTO Y EL COSTO DEL CAPITAL} {}}
+
+El lado izquierdo de la ecuación es la utilidad de la empresas con proyectos $\theta_{1}$, quienes venden su proyecto al precio más bajo ($P=\theta_{1}$). El lado derecho corresponde a la utilidad esperada, cuando la misma empresa simula ser una empresa con proyecto $\theta_{2}$ y que vende sólo una fracción $1-\alpha$ de su proyecto al precio más alto pero retiene una fracción $\alpha$ del proyecto malo.
+
+  Es de notar que esta utilidad esperada es igual a:
+\begin{align}
+EU(W_{0}+(1-\alpha)\theta_{2}+\alpha\hat{r(\theta_{1})})&= U(W_{0}+(1-\alpha)\theta_{2}+\alpha\theta_{1}-\frac{1}{2}\rho \alpha^{2} \sigma^{2})
+\end{align} 
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize SEÑALIZANDO A TRAVÉS DEL AUTO-FINANCIAMIENTO Y EL COSTO DEL CAPITAL} {}}
+    
+  
+    Significando que:
+     \begin{align}
+     \theta_{1}&\geq (1-\alpha)\theta_{2}+\alpha\theta_{1}-\frac{1}{2}\rho \alpha^{2} \sigma^{2} \nonumber \\
+     \frac{\alpha^{2}}{(1-\alpha)}&\geq \frac{2(\theta_{2}-\theta_{1})}{\rho \sigma^{2}}
+     \end{align} 
+      \begin{block} {Resultado de \cite{Leland77}}
+         Cuando el nivel del proyecto auto-financiable es observable, hay un continúo de señalas de equilibrio parametrizado por un número $\alpha$ y caracterizado por una bajo precio de la acción ($P_{1}=\theta_{1}$) de los empresarios que no se auto-financian, y un alto precio de la acción ($P_{2}=\theta_{2}$) para los empresarios que si se auto-financían en una fracción $\alpha$.\\      
+     \end{block}	
+     
+      
+     
+\end{frame}
+
+
+
+\begin{frame}
+    \frametitle{{\normalsize SEÑALIZANDO A TRAVÉS DEL AUTO-FINANCIAMIENTO Y EL COSTO DEL CAPITAL} {}}
+        
+    Este equilibrio puede ser catalogado de Pareto, por que todos los prestadores salen del mercado si su proyecto es $\theta_{1} $, teniendo el mismo resultado que en el caso de información completa. No obstante para las empresas con $\theta_{2} $ su nivel de utilidad es:
+    \begin{align}
+    U(W_{0}+\theta_{2}-\frac{1}{2}\rho \sigma^{2} \alpha^{2})\nonumber
+    \end{align} 
+    El cual es menor con respecto al caso de información completa. siendo la perdida de riqueza por el costo de información del capital (C):
+    \begin{align}
+    C&=\frac{1}{2}\rho \sigma^{2} \alpha^{2}\nonumber
+    \end{align} 
+    
+    La situación de equilibrio Pareto-dominante es aquella que corresponde al valor mínimo de $\alpha$ definida por (6).
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize COALICIÓN DE PRESTATARIOS} {}}
+    
+    \textit{En presencia de selección adversa, la coalición de prestatarios puede provocar una mejor situación con respecto a la de prestatarios individuales.}\\
+    
+    Suponga que N empresas idénticas del tipo $\theta_{2}$ forman una coalición  y emiten deuda para financiar sus N proyectos. Si el retornos de los N proyectos están independientemente distribuidos y las N empresas distribuyen equitativamente su emisión y retornos. La situación parece ser la misma que antes, el retorno esperado por proyecto es $\theta_{2}$, pero la diferencia es que la varianza por proyecto ahora es $\frac{\sigma_{2}}{N}$ (por diversificación).\\
+    
+    \begin{block} {Resultados (\cite{Diamond1984})}
+     Al considerar la coalición de prestatarios, en el modelo de \cite{Leland77} el costo de capital se reduce, dado de que ésta está en función decreciente del número de empresas que forman la coalición (Por ello es más barata un crédito para un Holding que para una subsidiaria.).     
+    \end{block}	
+    
+    
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{{\normalsize OTROS ESTUDIOS} {}}
+     \begin{itemize}
+         \item  Un agente dotado con información privada (privilegiada) enfrenta dos problemas: 
+         \begin{enumerate}
+             \item Tratar de vender su información directamente, enfrentándose con el problema de credibilidad.
+             \item Que los beneficios en usar esta información sea superiores al costo de obtenerla. Los beneficios serán cero si el precio es completamente revelado (paradoja de \cite{Grossman1980}). \cite{Campbell1980} ha estudiado los incentivos asociados a ese problema y como los FIS pueden solventarlos.
+         \end{enumerate}
+     \item \cite{Remark1984} modelan el caso de una analista de valores quien produce una información que es valorada por un inversionista principal neutral al riesgo; mostrando que si los analistas se coluden y monta contratos separados con diferentes inversionistas y mutualizan sus remuneración, la oferta de información aumenta. \cite{Millon1985} extiende este modelo introduciendo el concepto de información reutilizable y problemas de comunicación interna.  
+     \end{itemize}
+   
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize OTROS ESTUDIOS} {}}
+    \begin{itemize}
+        \item \cite{Prescott1986} proponen un modelo en el que los agentes con malos proyectos no tienen incentivos para revelar sus tipos y en el que la coalición entre empresas heterogéneas generan un subsidio cruzado siendo esto un incentivo para revelar la condición de sus proyectos. 
+        \item En \cite{Gorton1990} enfatiza en la propiedades de los bancos para transformar calidad de activos, para lo cual financian inversiones riesgosas a través de depósitos menos riesgosos. De manera que un un mundo con selección adversa, el apalancarse con depósitos (los cuales no son sensibles a los efectos de la información privada sobre las condiciones de los proyectos) puede ser un medio adecuado para los desinformados depositarios.
+    \end{itemize}
+    
+\end{frame}
+

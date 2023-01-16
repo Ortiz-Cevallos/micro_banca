@@ -1,0 +1,209 @@
+\documentclass[10pt, xcolor=table, x11names]{beamer}
+\usepackage[spanish]{babel} %CORTE DE PALABRAS RESPETANDO EL IDIOMA ESPAÑOL.
+\usepackage[Utf8]{inputenc} %acentos desde el teclado
+\usepackage	{textpos}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usetikzlibrary{arrows,positioning} 
+\usefonttheme{professionalfonts} % fuentes de LaTeX\epsilon
+\usetheme{Boadilla}      % or try Darmstadt, Madrid, Warsaw, ...
+\usecolortheme[RGB={130,130,190}]{structure} % or try albatross, beaver, crane, ...
+\useinnertheme{rounded}
+%\useoutertheme{shadow}
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamertemplate{navigation symbols}{}
+\setbeamercovered{transparent} % Velos
+\setbeamertemplate{caption}[numbered]
+\usepackage[spanish, authoryear, roud, datebegin]{flexbib} %CITAS BIBLIOGRÁFICAS
+\newtheorem{Teorema}{Teorema}
+\usepackage{ragged2e}
+\justifying
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[x11names,table]{xcolor}
+\usepackage[pdftex]{graphicx}
+\usepackage{epstopdf} % Convertir .eps a .pdf (si fuera necesario)
+\DeclareGraphicsExtensions{.pdf,.png,.jpg, .eps} % busca en este orden!
+\title[]{ROL DE LOS INTERMEDIARIOS FINANCIEROS: RIESGO DE CRÉDITO Y DILUCIÓN DE COSTO}
+\author[Luis Ortiz]{Luis Ortiz Cevallos}
+\institute[SECMCA]{\bf SECMCA}
+\date[\today]{\footnotesize \today}
+\usepackage[pdftex]{hyperref}
+   \hypersetup{colorlinks,%
+	citecolor=blue,%
+	filecolor=blue,%
+	linkcolor=blue,%
+	urlcolor=blue,%
+	pdftex}
+
+\begin{document}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{{\normalsize INTRODUCCIÓN} {}}
+\cite{Freixas2000} explora la coexistencia de un mercado financiero e intermediarios financieros en un mundo donde los prestamistas difieren en el riesgo de crédito. Ellos proveen un marco de análisis con la meta de entender por que la emisión de acciones y bonos es la manera predominante en que se financian firmas maduras y seguras. Mientras el crédito bancario es la única fuente de fondeo para firmas nacientes y riesgosas.\\
+Las imperfecciones en el mercado financiero es asociado con simetrías de la información entre firmas e inversores lo cual conduce a una dilución de costos de información. \\
+El rol de los bancos es producir un espacio de monitoreo. Ellos están dispuestos a renegociar las condiciones de crédito, escoger entre liquidar o apoyar en el negocio a las firmas enrumbándola  en una vía de eficiencia. En contraste la emisión de deuda no es negociable, un default conduce a una liquidación.   
+Aún los bancos deben soportar un alto costo de intermediación $\gamma$ derivado ya sea del costo por el monitoreo o por la dilución del costo vía emitiendo acciones en el mercado, lo cual se asume exógeno al modelo.
+
+
+ 
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize RIESGO DE CRÉDITO Y DILUCIÓN DE COSTO} {}}
+    
+    \begin{block} {Estructura básica del modelo}
+        \begin{description}
+            \item[Supuesto 1]  Todos los inversores son neutrales al riesgo-
+            \item[Supuesto 2] La tasa libre de riesgo está normalizada a cero.
+            \item[Supuesto 3] Un continuo de firmas tienen que escoger entre ser financiadas por un banco o emitir acciones o bonos.
+            \item[Supuesto 4] Los proyectos de inversión de las firmas están caracterizadas por un desembolso inicial de 1 en t=0, y obtener un retorno de $\gamma$ en t=1, en caso tenga éxito o cero en el caso contrario.
+           \item[Supuesto 5] El proyecto puede ser liquidado en t=1, por un valor de reventa de $A>0$.
+           \item[Supuesto 6] Las firmas son heterogéneas, difiriendo por la probabilidad observada de que tenga un éxito en t=1 (p), esta p es considerada con un rating de crédito de la firma.          
+      \end{description}
+        
+    \end{block}	
+    
+\end{frame}
+
+
+\begin{frame}
+\frametitle{{\normalsize RIESGO DE CRÉDITO Y DILUCIÓN DE COSTO} {}}
+
+\begin{block} {Estructura básica del modelo}
+    \begin{description}
+        
+        \item[Supuesto 7] p se distribuye en el intervalo $\left[p^{*}, 1 \right]  $ con $p^{*}<\frac{1}{2}$.
+        \item[Supuesto 8] Hay una selección adversa respecto al flujo de fondos de t=2.
+        \item[Supuesto 9] Hay dos tipos de firmas:
+        \begin{enumerate}
+            \item Firmas buenas en una proporción v, cuya probabilidad de éxito en t=2 es 1.
+            \item Firmas malas en una proporción 1-v, cuya probabilidad de éxito es cero.
+        \end{enumerate}
+        \item[Supuesto 10] Cada firma conoces que tipo es. No obstante los acreedores creen en t=0 que los tipos son uniformes.
+        \end{description}
+    
+\end{block}	
+En consecuencia, dado que hay selección adversa el costo de prestar $\$1$ en t=1, es una promesa de pago igual a $\$\frac{1}{v}$. Las firmas buenas saben que son capaces de pagar el crédito, noten que con información completa el costo para ellas debería ser de $\$1$. La dilución de costo es por tanto  $\frac{1}{v}-1$ por dólar prestado.
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{{\normalsize RIESGO DE CRÉDITO Y DILUCIÓN DE COSTO: Elección de las firmas} {}}
+    Las firmas escogen uno entre tres instrumentos financieros. Dado que las firmas malas deben hacer la mímica de que son firmas buenas, sólo se enfocará en la elección de las firmas buenas.\\
+    \begin{itemize}
+        \item Financiamiento por bonos, implica en caso de éxito un pago de R en t=1, y nada en t=2. En caso de default en t=1, la firma es declarada en bancarrota, siendo liquidada.
+        \item Emisión de acciones en una proporción $a \in \left[0, 1 \right] $ de los flujos generados por la firma es vendido a los inversores,
+        \item Crédito que implica un pago de $\hat{R}$ en t=1, y nada en t=2. Si la firma cae en default en t=1, el crédito es renegociado y el banco estaría dispuesto a extraer el superávit entero en t=2 dado que puede observar la probabilidad de éxito en t=2.
+    \end{itemize}  
+Cada uno de los instrumentos financieros tienen su pro y contra. La emisión de acciones elimina la ineficiencia de la liquidación pero genera alto costo de dilución para firmas buenas. Por lo contrario la emisión de bonos tiene el beneficio de baja dilución de costo pero genera ineficiencia por los costos de bancarrota a las firmas buenas. Finalmente el crédito genera ambos beneficios, dado que es eficiente una renegociación en caso de default lo limita la dilución de costos, no obstante genera un costo de intermediación.  
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize Financiamiento a través de bonos} {}}
+     
+     La condición de cero beneficios del inversor es:
+     \begin{align}
+    1&=pR+(1-p)A 
+     \end{align}
+    El retorno nomina R es factible ($R<\gamma$) si $p\gamma +(1-P)A>1$ y los beneficios esperados de las firmas buenas es:
+    \begin{align}
+     \Pi_{B}&=p(\gamma - R)+p\gamma
+    \end{align}
+    Reemplazando R por su valor dado por la condición de cero beneficios del inversor, tenemos:
+    \begin{align}
+    \Pi_{B}&=2p\gamma-1+(1-p)A
+    \end{align}
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize Financiamiento a través de emisión de acciones} {}}
+    Una fracción a del capital de las firmas es vendido a los inversores y dado que hay selección adversa acerca de la probabilidad de éxito en t=2, hay una dilución de costos, Los tenedores de acciones sólo anticipan un flijo de dinero esperado $v\gamma$ en t=2.
+    La condición de cero beneficios del inversor es:
+   \begin{align}
+   1&=a(p\gamma+v\gamma)
+   \end{align}
+   Y el beneficio esperado por la firmas buena es:
+   \begin{align}
+   \Pi_{E}&=(1-a)(p\gamma+\gamma)
+    \end{align}
+   Reemplazando a por su valor dado por la condición de cero beneficios del inversor, tenemos:
+   \begin{align}
+   \Pi_{E}&=(\gamma-\frac{1}{p+v})(p+1)
+   \end{align}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{{\normalsize Financiamiento a través de crédito} {}}
+    La condición de cero beneficios de los bancos es:
+    \begin{align}
+    1+\gamma&=p\hat{R} +(1-p)(A+v(\gamma-A))
+    \end{align}
+    Y el beneficio esperado por la firmas buena es:
+    \begin{align}
+    \Pi_{L}&=p(\gamma-\hat{R})+p\gamma
+    \end{align}
+    Reemplazando $p\hat{R}$ por su valor dado por la condición de cero beneficios del banco, tenemos:
+    \begin{align}
+    \Pi_{L}&=2p\gamma-1-\gamma+(1-p)(A+v(\gamma-A))
+    \end{align}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize Conclusión} {}}
+   Comparando los beneficios esperados para distinto valores de p y v, se deriva la óptima elección de las firmas. La emisión de acciones domina cuando el costo de dilución es bajo. La emisión de bono domina cuando el riesgo de crédito es bajo o costo de dilución es alto.
+ \begin{center}  
+ \begin{tikzpicture}[scale=5]
+ \draw [--] (0,0)  -- (1.5,0) node[below] {$1$}; 
+ \draw [--] (0,0)  -- (0,1.0) node[left] {$1$};
+ \draw [--] (0,1.0)  -- (1.5,1.0);
+ \draw [--] (1.5,0.0)  -- (1.5,1.0);
+ \node [left] at (0.0,0.5) { $ v $ };
+ \node [left] at (0,0) {$ 0 $ };
+ \node [below] at (0.75,0) {$ p $ };
+ \node [left] at (-0.05,0.85) { Baja };
+ \node [left] at (-0.05,0.75) { Dilución };
+  \node [left] at (-0.05,0.35) { Alta };
+ \node [left] at (-0.05,0.25) { Dilución };
+ \node [below] at (1.15,-0.05) {Bajo};
+ \node [below] at (1.15,-0.1) {Riesgo de crédito};
+ \node [below] at (0.40,-0.05) {Alto};
+ \node [below] at (0.40,-0.1) {Riesgo de crédito};
+ \draw[smooth, domain = 0:1.5, color=black]
+ plot (\x,{0.5+(\x*\x)/4.5}) node[right] {$ $};
+ \draw[smooth, domain = 0:1.0, color=black]
+ plot (\x,{0.1+(\x*\x)/1.6071}) node[right] {$ $};
+ \draw[fill, color=black] (1,0.7222) circle (0.3pt);
+ \node [below] at (0.5, 0.85) {Preferencias por acciones};
+ \node [above] at (0.3, 0.4) {Preferencias};
+ \node [above] at (0.3, 0.3) {por crédito};
+ \node [above] at (1.2, 0.4) {Preferencias};
+ \node [above] at (1.2, 0.3) {por bonos}
+ \end{tikzpicture}
+  \end{center}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+    \frametitle{{\large 
+            Bibliografía}}
+    \renewcommand{\refname}{Referencias}
+    \bibliography{Biblioteca}
+    \bibliographystyle{flexbib}
+\end{frame}
+
+
+
+\end{document}

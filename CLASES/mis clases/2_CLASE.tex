@@ -1,0 +1,210 @@
+\begin{frame}
+	\frametitle{{\normalsize INTRODUCCIÓN} {}}
+	\setcounter{equation}{0}
+	¿Qué es un banco y qué es lo que hace?\\
+    Un banco es una institución cuya actividad {\bf\emph{corriente}} es conceder crédito y recibir depósitos del {\bf\emph{público}}. \\
+    Los bancos financian una importante fracción de sus créditos a través de los depósitos del público, ahí la principal explicación de su fragilidad y la justificación de su regulación. Por ello algunos economistas predicen que los bancos serán sustituidos por los fondos mutuos o narrow banking, quienes invierten los depósitos en valores negociados o por otras instituciones financieras quienes conceden crédito a través de la emisión de deuda o acciones.\\
+    El término {\bf\emph{público}}, enfatiza que los bancos provee un único servicio al público: Liquidación y medio de pago. Es de notar que el público a diferencia de los inversores institucionales, no tiene los medios para evaluar la solidez de una institución y la calidad de sus activos, por lo que confían en los bancos para proveerse de esos bienes públicos. 
+     
+    
+    	
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize FUNCIONES DE UN BANCO} {}}
+   Los bancos desarrollan cuatro funciones:
+   \begin{itemize}
+       \item Ofrecen liquidez y servicios de pagos.
+       \item Transforman activos
+       \item Administran riesgos
+       \item Procesan información y monitorean a los deudores
+   \end{itemize}    
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize Liquidez y servicios de pagos} {}}
+    Dada la existencia de costos de transacción el dinero es el medio de cambio. Hay dos tipos de dinero:
+    \begin{itemize}
+        \item Dinero mercancía 
+        \item Dinero fiduciario
+    \end{itemize}
+    Esta función de los bancos se puede entender de forma más precisa en dos actividades:
+    \begin{itemize}
+        \item Cambio de moneda
+        \item Servicios de pagos
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize Transformación de activos} {}}
+    La transformación de activos puede ser a través de 3 perspectivas:
+    \begin{itemize}
+        \item Conveniencia de denominación (unidad de tamaño)
+        \item Transformación de calidad (motivado por: Indivisibilidad de inversión, cuando pequeños depositarios no pueden diversificar su portafolio e información asimétrica a favor de los bancos)
+        \item Transformación de madurez (esto implica un riesgo que es mitigado por el crédito interbancario y derivado e instrumentos financieros )
+     \end{itemize}
+\end{frame}
+	
+    \begin{frame}
+        \frametitle{{\normalsize Administración de riesgos} {}}
+     Los riesgos usuales que enfrentan los bancos corresponden a una línea de sus balances. Estos son:
+     \begin{itemize}
+         \item Riesgo de crédito
+         \item Riesgo de tasa de interés
+         \item Riesgo de liquidez
+     \end{itemize}
+     Adicionalmente existe otro riesgo que no se identifica en la hoja de balance de los bancos pero que esta surgiendo en las últimas décadas:
+     \begin{itemize}
+         \item Riesgo por operaciones fuera de balances
+     \end{itemize}
+\end{frame}
+    
+\begin{frame}
+    \frametitle{{\normalsize Bancos en el modelo Arrow-Debreu: Esquema de las decisiones económicas de los agentes} {}}
+    
+    \begin{tikzpicture}
+    \node[right] (MF) at (0.0,10) {{\tiny MERCADO FINANCIERO}};
+    \node[right] (MF1) at (0.2,9.5){{\tiny $B_{f}+B_{b}=B_{h}$}};
+    
+    \node[right] (F) at (-3.3,7.5) {{\tiny $Firmas$}};
+    \node[left] (F1) at (-3.0,7.3) {{\tiny $Activos$}};
+    \node[right] (F2) at (-2.5,7.3){{\tiny $Pasivos$}};
+    \node (F11) at (-3.5,7.0)  {{\tiny $Incersión I$}};
+    \node (F21) at (-1.7,7.0) {{\tiny Títulos $B_{f}$}};
+    \node (F22) at (-1.4,6.75) {{\tiny Créditos $ L^{-}$}};
+    
+    \node[right] (B) at (0.5,5.0) {{\tiny $Bancos$}};
+    \node[left] (B1) at (0.75,4.75) {{\tiny $Activos$}};
+    \node[right] (B2) at (1.0,4.75){{\tiny $Pasivos$}};
+    \node (B11) at (-0.25,4.5)  {{\tiny  Créditos $ L^{+}$}};
+    \node (B21) at (2.25,4.5) {{\tiny Títulos $B_{b}$}};
+    \node (B22) at (3.0,4.25) {{\tiny Dpósitos $ D^{-}$}};
+    
+\node[right] (H) at (3.3,7.5) {{\tiny $Hogares$}};
+    \node[left] (H1) at (3.75,7.3) {{\tiny $Activos$}};
+\node[right] (H2) at (4.25,7.3){{\tiny $Pasivos$}};
+\node[left] (H11) at (3.5,7.0)  {{\tiny Títulos $B_h$}};
+\node[left] (H12) at (3.5,6.75)  {{\tiny Depósitos $D^{+}$}};
+\node[right] (H21) at (4.5,7.0) {{\tiny Ahorros $S$}};
+
+    
+    
+    \path[->] (MF1) edge (F21)
+    (MF1) edge (B21)
+    (B11) edge (F22)
+    (H12) edge (B22)
+    (H11) edge (MF1);
+    \end{tikzpicture}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{{\normalsize Bancos en el modelo Arrow-Debreu} {}}
+   \begin{block} {Objetivo}
+       Conocer la utilidad de los bancos en el modelo Arrow-Debreu. 	
+   \end{block}	
+   \begin{block} {Estructura: Hogares}
+       {\footnotesize \begin{description}
+           \item[Supuesto 1] Los hogares viven en esa economía por 2 períodos y estan dotados de una riqueza inicial: $W_{1}$.
+           \item[Supuesto 2] Los hogares seleccionan el perfil temporal de su consumo: $(C_{1}, C_{2})$
+           \item[Supuesto 3] Los hogares son los dueños de los bancos y empresas, reciben el periodo 2 los beneficios que las empresas y bancos obtuvieron: $\Pi_{f}$ y $\Pi_{b}$ respectivamente. 
+           \item[Supuesto 4] Los hogares deciden como mantener sus ahorro entre tres opciones: Ahorro en el banco en forma  de depósitos $D^{+}$ cuyo rendimiento es $r_{b}$, títulos en bonos de empresas $B_{f} $, cuyo rendimiento es $r_{f} $ y títulos en bancos $B_{h}$ cuyo rendimiento es $r_{b}$. 	
+          \end{description}}
+     
+   \end{block}	
+\end{frame}
+
+
+
+\begin{frame}
+    \frametitle{{\normalsize Bancos en el modelo Arrow-Debreu} {}}
+    
+    \begin{block} {Estructura: Hogares} 
+     Bajo esa estructura el problema de los hogares se resumen en:
+    \begin{align}
+    \max U(C_{1},C_{2})\nonumber \\
+    s.a:\nonumber\\
+    C_{1}+B_{h}+D_{h}&=W_{1}\nonumber\\      pC_{2}&=\Pi_{f}+\Pi_{b}+(1+r)B_{h}+(1+r_{b})D_{h}\nonumber
+    \end{align}
+    \end{block}
+      \begin{block} {Implicaciones}
+        La solución de la cartera de ahorro de los hogares es interior si y sólo sí se cumple que:
+        \begin{align}
+        r&=r_{b}
+        \end{align} 	
+       
+    \end{block}	
+
+\end{frame}
+
+
+
+\begin{frame}
+    \frametitle{{\normalsize Bancos en el modelo Arrow-Debreu} {}}
+    \begin{block} {Implicaciones}
+        Si la emisión de títulos y el Crédito son sustitutos perfectos se obtiene una solución interior por que se cumple que:
+        \begin{align}
+        r&=r_{L}
+        \end{align} 
+     \end{block}
+   
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{{\normalsize Bancos en el modelo Arrow-Debreu} {}}
+    \begin{block} {Estructura: Bancos}
+        \begin{description}
+            \item[Supuesto 1] Los bancos escogen su oferta de créditos: $L_{b}$, su demanda de depósitos: $D_{b}$ y su emisión de títulos: $B_{b} $.
+        \end{description}
+        Bajo esa estructura el problema de los bancos es el de máximizar sus beneficios:
+        \begin{align}
+        \max \Pi_{b}\nonumber \\
+        s.a:\nonumber\\
+        \Pi_{b}&= r_{L}L_{b}-rB_{b}-r_{d}D_{b}\nonumber\\      
+        L&=B_{b}+D_{b}\nonumber
+        \end{align}
+    \end{block}	
+ \end{frame}
+
+
+\begin{frame}
+    \frametitle{{\normalsize Bancos en el modelo Arrow-Debreu} {}}
+    \begin{block} {Equilibrio General}
+    El equilibrio general esta caracterizado por los vectores: $ (r, r_{L}, r_{D}) $ y tres vectores adicionales de la demanda y oferta de los hogares ($(C_{1}, C_{2}, B_{h}, D_{h}) $), empresas ($(I, B_{f}, L_{f}) $) y bancos ($(L_{b}, B_{b}, D_{b}) $).
+    Teniendo en cuenta:
+    \begin{itemize}
+        \item Cada agente se comporta optimamente.
+        \item Cada mercado se clarea:
+        \begin{itemize}
+            \item $I=S$ (mercados de bienes)
+            \item $D_{h}=D_{b} $ (mercado de depósitos)
+            \item $L_{f}=L_{b} $ (mercado de créditos)
+            \item $B_{H}=B_{f}+B_{b}$ (mercado de bonos)
+        \end{itemize}
+    \end{itemize}
+   {\footnotesize Dada las ecuaciones 1 y 2 está claro que una de las condiciones de equilibrios es que:
+   \begin{align}
+   r&=r_{L}=r_{b}
+   \end{align} }
+    \end{block}	
+\end{frame}
+
+
+
+\begin{frame}
+    \frametitle{{\normalsize Bancos en el modelo Arrow-Debreu} {}}
+    \begin{block} {Implicaciones}
+        \begin{enumerate}
+            \item La condición de equilibrio provoca que los beneficios de los bancos sean cero 
+            \item Tanto los hogares como las firmas no enfrentan restricciones a un mercado financiero perfecto
+           \item El tamaña de los balances bancarios no tienen ningun efecto en otros agentes económicos
+           \item El modelo de equilibrio general con mercado financieros completos (el modelo Arrow-Debreu) no pueden ser usado para el estudio del sector bancario (los bancos son redundantes). Hay dos vías para elaborar un modelo util para el análisis de los bancos. Estos son
+           \begin{itemize}
+               \item El paradigma del mercado incompleto
+               \item El recurso de la Organización industrial de los bancos.
+           \end{itemize}
+        \end{enumerate}
+     
+    \end{block}	
+\end{frame}

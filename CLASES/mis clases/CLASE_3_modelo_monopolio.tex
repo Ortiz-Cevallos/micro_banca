@@ -1,0 +1,114 @@
+
+\begin{frame}
+    \frametitle{{\normalsize MONTI-KLEIN MODEL DE BANCO MONOPOLIO} {}}
+    \setcounter{equation}{0}
+    \begin{block} {Estructura básica del modelo}
+        \begin{description}
+            \item[Supuesto 1]  Existe un banco monopolistica, el cual enfrenta una demanda de créditos ($L(r_{L})$) con pendiente negativa y una oferta de depósitos con pendiente positiva ($D(r_{D})$).
+            \item[Supuesto 2] La decisión de los bancos es sobre los niveles de L y D.
+            \item[Supuesto 3] El banco considera r dado ya sea por que es fijado por el banco central o por el mercado de capital internacional  
+            \item[Supuesto 4] La función de beneficios de los bancos ($\pi $) es cóncava.     
+        \end{description}
+        
+    \end{block}	
+    
+    
+    El beneficio del banco puede definirse como:
+    \begin{align}
+    \pi&=\pi(L, D)=(r_{L}(L)-r)L+(r(1-\alpha)-r_{D}(D))D-C(D,L) 
+    \end{align}   
+    
+    Los beneficios de los bancos es igual al margen de intermediación sobre el crédito y depósitos menos el manejo de costos. 
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize MONTI-KLEIN MODEL DE BANCO MONOPOLIO} {}}
+    
+    Así el comportamientos de los bancos se deducen de las condiciones de primer orden:
+    \begin{align}
+    \dfrac{\delta \pi}{\delta L}&=r_{L}^{'}(L)L+r_{L}-r-C_{L}^{'}(D,L)=0  \\
+    \dfrac{\delta \pi}{\delta D}&=-r_{D}^{'}(D)D+r(1-\alpha)-r_{D}-C_{D}^{'}(D,L)=0  
+    \end{align} 
+    Si definimos la elasticidad de la demanda de crédito y oferta de depósitos como $\epsilon_{L}=-\frac{r_{L}L^{'}(r_{L})}{L(r_{L})}>0   \; y \; \epsilon_{D}=\frac{r_{D}D^{'}(r_{D})}{D(r_{D})}>0$
+    respectivamente. La solución de $r_{L}^{*}\; \; y \; r_{D}^{*}$, es caracterizada por:
+    \begin{align}
+    \dfrac{r_{L}^{*}-(r+C_{L}^{'})}{r_{L}^{*}}&=\dfrac{1}{\epsilon_{L}(r_{L}^{*})}  \\
+    \dfrac{r(1-\alpha)-C_{D}^{'}-r_{D}^{*}}{r_{D}^{*}}&=\dfrac{1}{\epsilon_{D}(r_{D}^{*})}  
+    \end{align} 
+    
+    
+    
+\end{frame}
+
+
+
+\begin{frame}\frametitle{{\normalsize MONTI-KLEIN MODEL DE BANCO MONOPOLIO} {}}
+    
+     Las dos ecuaciones anteriores son una adaptación simple del sector bancarios su familiaridad es por que el lado izquierdo representa un índice de Lerner (precio menos costos divididos por precio) y el lado derecho la elasticidad inversa.
+     Ante un mayor poder de mercado, la elasticidad tiende ha ser pequeño y el índice de Lerner alto. Un modelos competitivo se corresponde a la situación en que la elasticidad tiende ha ser infinita. El resultado nos muestra que los margenes de intermediación tienden a ser alto cuanto más alto sea el poder de mercado.
+    \begin{block} {Resultado}
+        \begin{enumerate}
+            \item Un banco monopolio es aquel cuyo volumen de depósitos y créditos se ajustan de manera de que el índice de Lerner se iguale a la inversa de la elasticidad. Consecuencia de ello, es que los margenes de intermediación se ven afectado ante la sustitución de un producto bancario por la aparición de un producto en el mercado financiero.
+            \item Si el manejo de costos es aditivo, el problema de decisión de los bancos separable. $r_{D}^{*} $ es independiente del mercado de crédito y viceversa
+        \end{enumerate}    
+   
+    \end{block}	 
+    
+    
+    
+\end{frame}
+
+
+
+
+\begin{frame}
+    \frametitle{{\normalsize OLIGOPOLIO} {}}
+    
+    \begin{block} {Estructura básica del modelo}
+        \begin{description}
+            \item[Supuesto 1]  Existen N bancos indexados por $n=1,2,\cdots N$.
+            \item[Supuesto 2] Por simplicidad los bancos tienen una misma función de costos: $C(D,L)=\gamma_{D}D+\gamma_{L}L $.
+            \item[Supuesto 3] Definimos el equilibrio de Cournot como la N parejas ($D_{n}^{*}, L_{n}^{*} $) en el que cada una máximiza los beneficios del banco n correspondiente, tomando el volumen de depósitos y créditos de los otros bancos dado.
+        \end{description}
+       
+    \end{block}	
+    El supuesto 3 nos dice que para un banco n su pareja ($D_{n}^{*}, L_{n}^{*} $), se deduce del problema:
+    \begin{align}
+    \max_{(D_{n}, L_{n})}  &\left(r_{L}\left(L_{n}+\sum_{m\neq n}L_{m}^{*} \right)-r  \right)L_{n}+ \nonumber \\
+    &\left( r(1-\alpha)-r_{D}\left(D_{n}+\sum_{m\neq n}D_{m}^{*} \right) \right)D_{n}-C(D_{n}, L_{n})   \nonumber 
+    \end{align}   
+    
+\end{frame}
+
+
+
+\begin{frame}
+    \frametitle{{\normalsize OLIGOPOLIO} {}}
+    
+    En ese problema hay un único equilibrio donde: $D_{n}^{*}=\frac{D^{*}}{n}\; \; y\; \; L_{n}^{*}=\frac{L^{*}}{n} $. Las CPO son:
+    \begin{align}
+    \dfrac{\delta \pi_{n}}{\delta L_{n}}&=r_{L}^{'}(L^{*})\frac{L^{*}}{n}+r_{L}(L^{*})-r-\gamma_{L}=0  \nonumber \\
+    \dfrac{\delta \pi_{n}}{\delta D_{n}}&=-r_{D}^{'}(D^{*})\frac{D^{*}}{n}+r(1-\alpha)-r_{D}(D^{*})-\gamma_{D}=0  \nonumber 
+    \end{align} 
+  Estas CPO pueden escribirse como:
+ \begin{align}
+ \dfrac{r_{L}^{*}-(r+C_{L}^{'})}{r_{L}^{*}}&=\dfrac{1}{N \epsilon_{L}(r_{L}^{*})}  \\
+ \dfrac{r(1-\alpha)-C_{D}^{'}-r_{D}^{*}}{r_{D}^{*}}&=\dfrac{1}{N \epsilon_{D}(r_{D}^{*})}  
+ \end{align} 
+  Noten que la única diferencia entre el caso de monopolio y Cournot es que la elasticidad es multiplicada por N. Es decir se trata de un modelo de competencia imperfecta con dos casos extremos N=1 y $N=\infty$.      
+\end{frame}
+
+
+
+
+
+\begin{frame}
+    \frametitle{{\normalsize OLIGOPOLIO} {}}
+    Las ecuaciones 6 y 7, proveen un posible test de competencia imperfecta sobre el sector bancario. Adicionalmente estas ecuaciones permiten ver que la sensibilidad de $r_{L}\; \; y \; \; r_{D}$ ante cambios en r dependerá de N. Lo cual es una aproximación a la intensidad de la competencia.\\
+    Asumiendo la elasticidad contante tenemos:
+ \begin{align}
+ \frac{\delta r_{L}^{*}}{\delta r}&= \dfrac{1}{1-\frac{1}{N \epsilon_{L}}}\nonumber \\
+ \frac{\delta r_{D}^{*}}{\delta r} &=\dfrac{1-\alpha}{1+\frac{1}{N \epsilon_{D}}}\nonumber 
+ \end{align} 
+   Así que cuando la intensidad de la competencia se incrementa $r_{L}^{*}$ es menos sensitivo ante cambios de r.
+\end{frame}

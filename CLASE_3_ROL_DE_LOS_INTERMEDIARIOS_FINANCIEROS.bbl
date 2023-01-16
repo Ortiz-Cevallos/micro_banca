@@ -1,0 +1,133 @@
+\begin{thebibliography}{9}
+%Comandos de formato, por si no están definidos.
+\ProvideTextCommand{\guillemotleft}{OT1}{\leavevmode\raise
+  .27ex\hbox{$\scriptscriptstyle\ll$}}
+  \ProvideTextCommand{\guillemotright}{OT1}{\leavevmode\raise
+  .27ex\hbox{$\scriptscriptstyle\gg$}}
+\providecommand{\enquote}[1]{\guillemotleft#1\guillemotright}
+  \providecommand{\natexlab}[1]{#1}
+  \providecommand{\bibnamefont}[1]{\textsc{#1}}
+  \providecommand{\bibfnamefont}[1]{\textsc{#1}}
+  \providecommand{\bibfnamefontand}[1]{#1}
+  \providecommand{\citenamefont}[1]{#1}
+  \providecommand{\bibnamefont}[1]{\textsc{#1}}
+  \providecommand{\bbletalfont}[1]{\emph{#1}}
+  \providecommand{\citeandfont}[1]{#1} \providecommand{\citetalfont}[1]{#1}
+  \providecommand{\bibyearfont}[1]{#1} \providecommand{\isbn}[1]{ISBN #1}
+  \providecommand{\url}[1]{\texttt{#1}} \providecommand{\urlprefix}{}
+  \providecommand{\nameseparator}{;}
+  \providecommand{\namereplace}[1]{{---{}---} \ifx\datebegin\relax \else
+  \def\datebegin #1.{\relax}\fi} \providecommand{\dateend}[1]{, #1}
+  \providecommand{\bibtitle}[1]{#1}\providecommand{\bibtranslator}[1]{#1}
+  \providecommand{\bibtranslatorname}{Traducido por }
+  \providecommand{\selectlanguage}[1]{\relax} \providecommand{\finalpoint}{.}
+  \providecommand{\namesend}{:} \providecommand{\Capitalize}[1]{\uppercase{#1}}
+  \providecommand{\capitalize}[1]{\expandafter\Capitalize#1}
+  \providecommand{\bibinfont}[1]{\textbf{#1}}
+  \providecommand{\inbooktitlefont}[1]{\emph{#1}}
+  \providecommand{\bibvolfont}[1]{\textbf{#1}}
+  \providecommand{\bibandfont}[1]{#1}
+  \providecommand{\bibcommentname}{\textsc{Obs:}}
+  \providecommand{\bibcomment}[2]{\begin{quotation}
+  \noindent\textsc{\bibcommentname}\ #2\end{quotation}}
+  \providecommand{\bibabstract}[2]{\begin{quotation}
+  \noindent\textsc{\abstractname:}\ #2\end{quotation}}
+\providecommand{\bblin}{En} \providecommand{\bbland}{y}
+  \providecommand{\bbletal}{y otros} \providecommand{\bbled}{ed.}
+  \providecommand{\bbleds}{eds.} \providecommand{\bbvolume}{vol.}
+  \providecommand{\bblof}{de} \providecommand{\bbledition}{ª~edición}
+  \providecommand{\bblp}{p.}  \providecommand{\bblpp}{pp.}
+  \providecommand{\bbltechreport}{Informe técnico}
+  \providecommand{\bblmthesis}{Tesina} \providecommand{\bblphdthesis}{Tesis
+  doctoral} \providecommand{\bblchapter}{cap\'\i{}tulo}
+  \providecommand{\bblnumber}{número} \providecommand{\bblvolume}{volumen}
+  \providecommand{\MR}[1]{\relax\ifhmode\unskip\space\fi MR #1}
+  \expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else  \providecommand{\doi}{doi:
+  \begingroup \urlstyle{rm}\Url}\fi
+%Para resultados estilo plain descomente la línea siguiente
+%\let\oldbibitem=\bibitem \def\bibitem[#1]#2{\oldbibitem{#2}}
+
+\bibitem[{\citenamefont{Akerlof}(1970)}]{Akerlof1970}
+  \bibnamefont{Akerlof}, \bibfnamefont{George~A.}\namesend{}\datebegin 1970.
+  \newblock \bibtitle{\enquote{{The Market for Lemons : Quality Uncertainty and
+  the Market Mechanism}}}.
+  \newblock \emph{The Quarterly Journal of Economics}\dateend{1970},
+  \bibvolfont{84(3)}, \bblpp{} 488--500\finalpoint{}
+  \newline\urlprefix\url{https://ideas.repec.org/a/oup/qjecon/v84y1970i3p488-500..html}
+
+\bibitem[{\citenamefont{Boyd} \citeandfont{\bbland{}}
+  \citenamefont{Prescott}(1986)}]{Prescott1986}
+  \bibnamefont{Boyd}, \bibfnamefont{John~H.} \bibandfont{\bbland{}}
+  \bibnamefont{Prescott}, \bibfnamefont{Edward~C.}\namesend{}\datebegin 1986.
+  \newblock \bibtitle{\enquote{{Financial intermediary-coalitions}}}.
+  \newblock \emph{Journal of Economic Theory}\dateend{1986},
+  \bibvolfont{38(2)}, \bblpp{} 211--232\finalpoint{}
+  \newline\urlprefix\url{https://ideas.repec.org/a/eee/jetheo/v38y1986i2p211-232.html}
+
+\bibitem[{\citenamefont{Campbell} \citeandfont{\bbland{}}
+  \citenamefont{Kracaw}(1980)}]{Campbell1980}
+  \bibnamefont{Campbell}, \bibfnamefont{Tim~S} \bibandfont{\bbland{}}
+  \bibnamefont{Kracaw}, \bibfnamefont{William~A}\namesend{}\datebegin 1980.
+  \newblock \bibtitle{\enquote{{ Information Production, Market Signalling, and
+  the Theory of Financial Intermediation}}}.
+  \newblock \emph{Journal of Finance}\dateend{1980}, \bibvolfont{35(4)},
+  \bblpp{} 863--82\finalpoint{}
+  \newline\urlprefix\url{https://ideas.repec.org/a/bla/jfinan/v35y1980i4p863-82.html}
+
+\bibitem[{\citenamefont{Diamond}(1984)}]{Diamond1984}
+  \bibnamefont{Diamond}, \bibfnamefont{Douglas~W.}\namesend{}\datebegin 1984.
+  \newblock \bibtitle{\enquote{{Financial Intermediation and Delegated
+  Monitoring}}}.
+  \newblock \emph{Review of Economic Studies}\dateend{1984},
+  \bibvolfont{51(3)}, \bblpp{} 393--414\finalpoint{}
+  \newline\urlprefix\url{https://ideas.repec.org/a/oup/restud/v51y1984i3p393-414..html}
+
+\bibitem[{\citenamefont{Gorton} \citeandfont{\bbland{}}
+  \citenamefont{Pennacchi}(1990)}]{Gorton1990}
+  \bibnamefont{Gorton}, \bibfnamefont{Gary} \bibandfont{\bbland{}}
+  \bibnamefont{Pennacchi}, \bibfnamefont{George}\namesend{}\datebegin 1990.
+  \newblock \bibtitle{\enquote{{ Financial Intermediaries and Liquidity
+  Creation}}}.
+  \newblock \emph{Journal of Finance}\dateend{1990}, \bibvolfont{45(1)},
+  \bblpp{} 49--71\finalpoint{}
+  \newline\urlprefix\url{https://ideas.repec.org/a/bla/jfinan/v45y1990i1p49-71.html}
+
+\bibitem[{\citenamefont{Grossman} \citeandfont{\bbland{}}
+  \citenamefont{Stiglitz}(1980)}]{Grossman1980}
+  \bibnamefont{Grossman}, \bibfnamefont{Sanford~J} \bibandfont{\bbland{}}
+  \bibnamefont{Stiglitz}, \bibfnamefont{Joseph~E}\namesend{}\datebegin 1980.
+  \newblock \bibtitle{\enquote{{On the Impossibility of Informationally
+  Efficient Markets}}}.
+  \newblock \emph{American Economic Review}\dateend{1980}, \bibvolfont{70(3)},
+  \bblpp{} 393--408\finalpoint{}
+  \newline\urlprefix\url{https://ideas.repec.org/a/aea/aecrev/v70y1980i3p393-408.html}
+
+\bibitem[{\citenamefont{Leland} \citeandfont{\bbland{}}
+  \citenamefont{Pyle.}(1976)}]{Leland77}
+  \bibnamefont{Leland}, \bibfnamefont{Hayne~E.} \bibandfont{\bbland{}}
+  \bibnamefont{Pyle.}, \bibfnamefont{David~H.}\namesend{}\datebegin 1976.
+  \newblock \bibtitle{\enquote{{Informational Asymmetries, Financial Structure,
+  and Financial Intermediation}}}.
+  \newblock \emph{Research Program in Finance Working Papers~41}, University of
+  California at Berkeley\dateend{1976}\finalpoint{}
+  \newline\urlprefix\url{https://ideas.repec.org/p/ucb/calbrf/41.html}
+
+\bibitem[{\citenamefont{Millon} \citeandfont{\bbland{}}
+  \citenamefont{Thakor}(2004)}]{Millon1985}
+  \bibnamefont{Millon}, \bibfnamefont{Marcia~H.} \bibandfont{\bbland{}}
+  \bibnamefont{Thakor}, \bibfnamefont{Anjan~V.}\namesend{}\datebegin 2004.
+  \newblock \bibtitle{\enquote{{Moral Hazard and Information Sharing: A Model
+  of Financial Information Gathering Agencies}}}.
+  \newblock \emph{Finance 0411024}, EconWPA\dateend{2004}\finalpoint{}
+  \newline\urlprefix\url{https://ideas.repec.org/p/wpa/wuwpfi/0411024.html}
+
+\bibitem[{\citenamefont{Ramakrishnan} \citeandfont{\bbland{}}
+  \citenamefont{Thakor}(2004)}]{Remark1984}
+  \bibnamefont{Ramakrishnan}, \bibfnamefont{Ram T.~S.} \bibandfont{\bbland{}}
+  \bibnamefont{Thakor}, \bibfnamefont{Anjan~V.}\namesend{}\datebegin 2004.
+  \newblock \bibtitle{\enquote{{The Valuation of Assets under Moral Hazard}}}.
+  \newblock \emph{Finance 0411032}, EconWPA\dateend{2004}\finalpoint{}
+  \newline\urlprefix\url{https://ideas.repec.org/p/wpa/wuwpfi/0411032.html}
+
+\end{thebibliography}

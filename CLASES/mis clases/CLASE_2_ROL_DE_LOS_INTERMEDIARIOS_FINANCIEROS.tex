@@ -1,0 +1,259 @@
+\documentclass[10pt, xcolor=table, x11names]{beamer}
+\usepackage[spanish]{babel} %CORTE DE PALABRAS RESPETANDO EL IDIOMA ESPAÑOL.
+\usepackage[Utf8]{inputenc} %acentos desde el teclado
+\usepackage	{textpos}
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning} 
+\usefonttheme{professionalfonts} % fuentes de LaTeX\epsilon
+\usetheme{Boadilla}      % or try Darmstadt, Madrid, Warsaw, ...
+\usecolortheme[RGB={130,130,190}]{structure} % or try albatross, beaver, crane, ...
+\useinnertheme{rounded}
+%\useoutertheme{shadow}
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamertemplate{navigation symbols}{}
+\setbeamercovered{transparent} % Velos
+\setbeamertemplate{caption}[numbered]
+\usepackage[spanish, authoryear, roud, datebegin]{flexbib} %CITAS BIBLIOGRÁFICAS
+\newtheorem{Teorema}{Teorema}
+\usepackage{ragged2e}
+\justifying
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[x11names,table]{xcolor}
+\usepackage[pdftex]{graphicx}
+\usepackage{epstopdf} % Convertir .eps a .pdf (si fuera necesario)
+\DeclareGraphicsExtensions{.pdf,.png,.jpg, .eps} % busca en este orden!
+\title[]{ROL DE LOS INTERMEDIARIOS FINANCIEROS}
+\author[Luis Ortiz]{Luis Ortiz Cevallos}
+\institute[SECMCA]{\bf SECMCA}
+\date[\today]{\footnotesize \today}
+\usepackage[pdftex]{hyperref}
+\hypersetup{colorlinks,%
+	citecolor=blue,%
+	filecolor=blue,%
+	linkcolor=blue,%
+	urlcolor=blue,%
+	pdftex}
+
+\begin{document}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{{\normalsize LOS INTERMEDIARIOS FINANCIEROS} {}}
+	
+    Los intermediarios financieros (IF) son todos aquellos agentes especializados en vender y comprar activos financieros.\\
+    En terminología de Organización Industrial los IF son análogos a los intermediarios comerciales (retailer). La justificación para su existencia es desde la teorías de Organización Industrial  \textit{la existencia de fricciones en la tecnología de transacción.}\\
+    No obstante las actividades de los bancos son más complejas por las razones siguientes:
+    \begin{itemize}
+        \item Los bancos trabajan con contratos financieros (Créditos y depósitos) que no pueden ser fácilmente disueltos, en oposición a las acciones financieras como valores y bonos los cuales son contratos anónimos en el sentido de que su tenedor es irrelevante lo que lo hace fácil de comercializar.
+        \item Los contratos para la emisión de créditos es diferente al contrato para la emisión de un depósito, relacionado al labor de los bancos en transformar activos. 
+    \end{itemize} 
+    
+    
+    	
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize La existencia de fricciones en la tecnología de transacción: El recurso de los costos de transacción} {}}
+    
+    En el mundo Arrow-Debreu, los prestatarios y ahorradores pueden diversificar su cartera; no obstante si se introduce dos fricciones: Indivisibilidad y no convexidad en la tecnología de transacción la perfecta diversificación se interrumpe surgiendo la necesidad de los IF.\\
+    La vía para introducir los costos de transacción es el de Economías de Escalas, el cual se puede entender como la existencia de un costo fijo por transacción o de manera más general como presencia de retornos crecientes en la tecnología de la transacción. Adicionalmente puede estar relacionado a la seguridad de liquidez, de acuerdo a la ley de los grande números, la mayoría de inversores quieren mantener sus ahorro en títulos no líquidos pero más rentables.\\
+    
+    
+    
+    
+    
+    
+    
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize El modelo de Coalición entre depositantes y seguros de liquidez } {}}
+    
+    Los servicios que ofrecen las Instituciones Depositarias es el de mantener un pozo liquido al servicio de los hogares que le sirva a ellos de medida de seguridad ante schocks idiosicráticos sobre las necesidades de su consumo.
+    
+     \begin{block} {Estructura básica del modelo}
+        \begin{description}
+            \item[Supuesto 1] Consideremos una economía de un sólo bien,  de tres períodos y de un continuo de agentes dotados cada uno de la cantidad de 1 en el período t=0.
+            \item[Supuesto 2] El bien debe ser consumido en el período T=1 o T=2 ($C_{1}, C_{2} $)
+            \item[Supuesto 3] Hay dos tipos de agentes lo tipo 1 quienes se consumen su dotación en el período 1 y los tipos 2 quienes se consumen su dotación en el período 2.
+             \item[Supuesto 4] En el período 1, todos los agentes aprenden a identificar el tipo de agente que hay en la economía.
+         \end{description}
+        
+    \end{block}	
+    
+    
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize El modelo de Coalición entre depositantes y seguros de liquidez } {}}
+    
+   Bajo supuestos básicos tenemos la preferencias de la economía pueden ser representadas por:
+   \begin{align}
+   U&=\pi_{1}u(C_{1})+\pi_{2}u(C_{2})\nonumber
+   \end{align}
+   Donde $\pi_{1}$ y  $\pi_{1}$ es la probabilidad de que los agentes sean del tipo 1 o 2, respectivamente.\\
+   El bien puede ser almacenado desde el período 1 al 2, o puede ser invertido en una cuenta I, que está en el intervalo $0\leq I \leq 1$ en t=0 y se somete a un cambio tecnológico.\\ 
+   El cambio tecnológico permite proveer un $R>1$ de unidades de consumo en T=2, pero sólo  $\iota<1$ en t=1.\\
+   
+   A continuación se discutirá este modelos en diferentes instituciones, para evaluar en cual de éstas mejora la eficiencia de la economía
+   
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{{\normalsize El modelo bajo una óptima asignación } {}}
+    
+    Si tenemos el siguiente problema;
+   \begin{align}
+   \max_{\{C_{1},C_{2}\}}U&=\pi_{1}u(C_{1})+\pi_{2}u(C_{2})
+   \end{align}
+   Sujetos a:
+   \begin{align}
+   \pi_{1}C_{1}&=1-I\\
+   \pi_{2}C_{2}&=RI
+   \end{align}
+   Despejando I de 2 y 3 tenemos:
+   \begin{align}
+   1-\pi_{1}C_{1}&=I\nonumber\\
+   \frac{\pi_{2}C_{2}}{R}&=I\nonumber\\
+   \pi_{1}C_{1}+\frac{\pi_{2}C_{2}}{R}&=1
+   \end{align}
+   Y la condición de equilibrio es:
+   \begin{align}
+   u^{'}(C_{1}^{*})&=Ru^{'}(C_{2}^{*})
+   \end{align}
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize El modelo bajo una óptima asignación: Autarquía } {}}
+   Este es el caso en el que no existe comercio entre los agentes en la economía. Cada agente escoge independientemente la cantidad de I que va a invertir en la tecnología iliquida, asumiendo que hay perfecta divisibilidad, si el es un agenti tipo 1 entonces su inversión se hará liquida en t=1, representandole:  \\
+    \begin{align}
+    C_{1}=1-I+\iota I&=1-I(1-\iota)
+    \end{align}
+   Para el agente tipo 2 ocurre:
+   \begin{align}
+   C_{2}=1-I+R I&=1+I(R-1)
+   \end{align}
+   
+ Note que el problema del agente sigue siendo 1, pero bajo las restricciones 6 y 7.\\
+ Además noten que $C_{1}=1\longleftrightarrow I=0$ y $C_{2}=R\longleftrightarrow I=1$; si no suceden ambos casos la eficiencia no se alcanza por que:
+ \begin{align}
+ \pi_{1}C_{1}+\frac{\pi_{2}C_{2}}{R}&<1
+ \end{align}
+ 
+ 
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{{\normalsize El modelo bajo una óptima asignación: Economía de mercado } {}}
+    Si suponemos ahora que los agentes pueden comerciar entre ellos, es posible agregar un mercado financiero en T=1. En ese mercado los agentes intercambian el bien de consumo por un bono libre de riesgo. Denotando P al precio del bono en t=1, el cual por convención equivaldrá a una unidad del bien de consumo en t=2. Claramente si $p\leq1 $ las personas preferirán acceder al mercado financiero con respecto a guardar el bien.\\
+    Por invertir I en t=0, el agente obtiene dependiendo si es del tipo 1 o tipo 2:
+      \begin{align}
+      C_{1}&=1-I+PRI\\
+      C_{2}=\frac{1-I}{P}+RI&=\frac{1}{P}\left( 1-I+PRI\right) 
+      \end{align}
+    Es de notar que de acuerdo a las ecuaciones 8 y 9, tenemos a siguiente identidad:
+     \begin{align}
+     C_{2}&=\frac{C_{1}}{P}
+    \end{align}
+    Dado que I puede ser escogido libremente por los agentes el único  posible precio de equilibrio de interior es:
+     \begin{align}
+     P&=\frac{C_{1}}{R}
+     \end{align}
+ \end{frame}
+
+
+\begin{frame}
+    \frametitle{{\normalsize El modelo bajo una óptima asignación: Economía de mercado } {}}
+    En otro caso ocurre un exceso de oferta o un exceso de demanda de bonos:
+     \[
+    I= \left\{ \begin{array}{lcl}
+    1 & \mbox{ si } & P>\frac{1}{R} \\
+    & & \\
+    0 & \mbox{ si } & P<\frac{1}{R}
+    \end{array}
+    \right.
+    \]
+    
+    La asignación de equilibrio de mercado es $C_{1}^{M}=1$ y $C_{2}^{M}=R$. Y los correspondientes niveles de inversión es $ I^{M}=\pi_{2}$.\\
+    Es de notar que la asignación de mercado, es Pareto-dominante respecto a la asignación de autorquía, aunque todavía se aleja de la asignación pareto-óptima dado que no satisface:
+    \begin{align}
+    u^{'}(C_{1}^{M})&=Ru^{'}(C_{2}^{M})\nonumber \\
+    u^{'}(1)&=Ru^{'}(R)\nonumber
+    \end{align}
+    Y es que si $Cu^{'}(C)$ es decreciente, en el caso de $R>1$ tenemos que $u^{'}(1)>Ru^{'}(R)$ y la asignación de mercado mejoraría aumentando el $C_{1}^{M}$ y disminuyendo $C_{2}^{M}$: $C_{1}^{M}=1<C_{1}^{*} $ y $C_{2}^{M}=R>C_{2}^{*} $.
+    \end{frame}
+
+
+
+
+\begin{frame}
+    \frametitle{{\normalsize El modelo bajo una óptima asignación: Economía de mercado } {}}
+    
+     \begin{block} {Implicaciones}
+       Es de notar que la economía de mercado no provee una seguridad ante choques de liquidez, ello es debido a que estos choques no son públicamente observables y por tanto, un seguro contingente para ellos no puede ser comercializado.\\
+       La razón es que la asignación de mercado no es Pareto-óptima, ya que el mercado no es completo, debido a que el estado de la economía (la lista de agentes tipo 1) no es observable por nadie, el único mercado financiero introducido en el modelo (el de lo bonos) no es suficiente para tener una eficiente diversificación del riesgo.
+        
+    \end{block}	
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize El modelo con intermediarios financieros } {}}
+    
+    La asignación Pareto-óptima dada por el par ($C_{1}^{*}, C_{2}^{*}$) que haga cumplir la condición:
+    \begin{align}
+    u^{'}(C_{1}^{*})&=Ru^{'}(C_{2}^{*})\nonumber \\
+    \end{align}
+    Puede ser implementada al introducir un IF que ofrezca un contrato de depósitos en los siguientes términos:
+    \begin{itemize}
+        \item Por un depósito de una unidad del bien en t=0.
+        \item El agente que haga el depósito podrá recibir $C_{1}^{*}$ en t=1, ó $ C_{2}^{*}$ en t=2, como él lo decida.
+     \end{itemize}
+ Para cumplir esa obligación el IF deberá almacenar $\pi_{1}C_{1}^{*} $ e invertir $I=1-\pi_{1}C_{1}^{*}$ en tecnología ilíquida.
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize El modelo con intermediarios financieros } {}}
+    
+    \begin{block} {Implicaciones}
+       \begin{enumerate}
+           \item En una economía en la cuál los agentes sujetos individuales independientes de choques de liquidez, la asignación de mercado puede mejorar por la provisión de un contrato de depósito ofrecido por un IF.
+           \item El banco que ofrezca servicios de depósitos no requerirá de capital; pues el riesgo de liquidez está perfectamente diversificado y el crédito no trae un riesgo (ver la hoja de balance del banco).
+           \item Un supuesto crucial es que ningún individuo del tipo 2 retirara sus depósitos en t=1, este supuesto no es irrelevante, dado que $u^{'}$ es decreciente y que $R>1$, tenemos que $C_{1}^{*}<C_{2}^{*}$ por tanto si el sujeto tipo 2 se retira en t=1 y almacena él mismo el bien, éste será menor. No obstante si este supuesto puede existir un equilibrio pareto-dominante.
+        \newcounter{enumTemp}
+        \setcounter{enumTemp}{\theenumi}   
+       \end{enumerate}
+      
+    \end{block}	
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize El modelo con intermediarios financieros } {}}
+    
+    \begin{block} {Implicaciones}
+        \begin{enumerate}
+            \setcounter{enumi}{\theenumTemp}
+            \item Los IF no pueden coexistir con un mercado de bonos; si mantenemos la existencia del mercado de bonos en t=1, el precio de equilibrio necesariamente será $P=\frac{1}{R}$ y la asignación óptima ($C_{1}^{*}, C_{2}^{*}$)  ya no sería un equilibrio pues:
+            \begin{align}
+            RC_{1}^{*}>R>C_{2}^{2}\nonumber 
+            \end{align}
+            Lo que significaría que el consumidor tipo 2, no tendría razón o incentivos para retirarse temprano y comprar bonos. Siendo está una debilidad del modelo. 
+        \end{enumerate}
+        
+    \end{block}	
+    
+\end{frame}
+\end{document}

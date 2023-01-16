@@ -1,0 +1,27 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\selectlanguage *{spanish}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {1}{Aversión y premio por riesgo}{3}{0}{1}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {2}{Funciones de la banca}{10}{0}{2}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {3}{Rol de los intermediarios financieros}{23}{0}{3}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {4}{Selección adversa, costo del capital y coalición de prestatarios}{37}{0}{4}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {5}{Delegando el monitoreo}{51}{0}{5}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {6}{Deuda de mercado vs. deuda de bancos}{61}{0}{6}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {7}{Monitoreo y reputación}{71}{0}{7}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {8}{Monitoreo y capital}{82}{0}{8}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {9}{Riesgo de crédito y dilusión de costo}{95}{0}{9}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {10}{Competencia perfecta}{106}{0}{10}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {11}{Monopolio}{122}{0}{11}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {12}{Competencia monopolistica}{129}{0}{12}

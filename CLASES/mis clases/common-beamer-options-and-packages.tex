@@ -1,0 +1,282 @@
+%=========================================================================
+%
+%  DETERMINE WHAT TO COMPILE
+%
+%-------------------------------------------------------------------------
+
+
+\ifdefined\presentationMode
+\ifcase\presentationMode\relax
+\documentclass[x11names, handout]{beamer}
+\or
+\documentclass[x11names, trans]{article}
+\usepackage{beamerarticle}
+\else
+\documentclass[x11names]{beamer}
+\fi
+\else
+\documentclass[x11names]{beamer}
+\fi
+
+
+%=========================================================================
+%
+%  LOAD PACKAGES
+%
+%-------------------------------------------------------------------------
+%\usepackage[x11names,table]{xcolor}
+\definecolor{luis}{RGB}{175,160,225}
+\usetheme{Boadilla}      % or try Darmstadt, Madrid, Warsaw, ...
+\setbeamercolor{frametitle}{fg=white,bg=luis}
+
+
+\usepackage{polyglossia}
+\setmainlanguage{spanish}
+
+\usepackage{todonotes}
+\usepackage{fontspec,xunicode}
+
+\usepackage{tabu, colortbl}
+\usepackage{hyperref}
+\hypersetup{
+	bookmarks=true,         % show bookmarks bar?
+	colorlinks=true,       % false: boxed links; true: colored links
+	linkcolor=black,          % color of internal links
+	citecolor=blue,        % color of links to bibliography
+	filecolor=magenta,      % color of file links
+	urlcolor=black           % color of external links
+}
+
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes,positioning,shadows,trees}
+\usepackage{pgfplots}
+\pgfplotsset{width=10cm, compat=1.10}
+\usepackage{ctable}
+\newcolumntype{E}{>{$}l<{$}}
+\usepackage{multirow}
+%\usepackage{wasysym}
+\usepackage{graphicx}
+\usepackage{multimedia}
+
+	
+\usepackage[%
+bibstyle=authoryear,%
+citestyle=authoryear-icomp,%
+sorting=nyt,%
+backend=biber,%
+url=false,%
+uniquename=false,%
+doi=false,%
+bibencoding=utf8%
+]{biblatex} % to format the bibliography
+% bib resources are added in course-info.tex file.
+
+%\usepackage{changepage}
+\usepackage{etoolbox}
+\newtoggle{HIDDEN}
+\togglefalse{HIDDEN}
+
+%#================ NEW MATH OPERATORS======================================
+\usepackage{amsmath,amsfonts, amssymb} % tools for typing mathematics
+\usepackage{xfrac}
+%\usepackage{pstricks}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\dd}{\,d\!}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Corr}{Corr}
+\DeclareMathOperator{\Prob}{\mathbb{P}}
+\newcommand{\MAT}[1]{\begin{bmatrix} #1 \end{bmatrix}}
+\newcommand{\argmin}[1]{\underset{#1}{\operatornamewithlimits{argmin}}}
+\newcommand{\argmax}[1]{\underset{#1}{\operatornamewithlimits{argmax}}}
+\newcommand{\marginal}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\notation}[2]{\underset{\scriptsize\color{SteelBlue4!60}\text{#2}}{#1}}
+\newcommand{\given}[1]{\,|\,#1}
+
+\newcounter{theexample} \setcounter{theexample}{0}
+
+\AtBeginSection{\frame{\sectionpage}}
+\AtBeginSubsection{\frame{\subsectionpage}}
+\renewcommand{\sectionname}{Sección}
+\renewcommand{\subsectionname}{Subsección}
+
+%=========================================================================
+%
+%  COMMANDS FOR PRESENTATION MODE
+%
+%-------------------------------------------------------------------------
+\mode<presentation>{
+	
+	\usefonttheme{professionalfonts}
+	\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+	
+	\newcommand{\ITEM}[2]{%
+		\begin{tabu} to \textwidth {>{\color{white}\columncolor{DodgerBlue4}}X[1,c,m]>{\small}X[4,l,m]}
+			#1 & #2 \\
+		\end{tabu}
+	}
+	
+	\newcommand{\EQ}[2]{%
+		\begin{tabu} to \textwidth {>{\color{white}\columncolor{teal}\scriptsize}X[1,c,m]>{\columncolor{orange!10}\small}X[4,c,m]}
+			\textbf{#1} & \begin{equation*}   #2 \end{equation*}\\
+		\end{tabu}
+	}
+
+	\newcommand{\CONCEPT}[4]{%
+        \extrarowsep =0.75em
+		\begin{tabu} to #1\textwidth {>{\color{white}\columncolor{teal}\scriptsize}X[1,c,m]>{\columncolor{teal!15}\small}X[#2,p,m]}
+			\textbf{#3} &  #4 \\
+		\end{tabu}
+	}	
+
+	\newenvironment{EXAMPLE}[1]{%
+		\stepcounter{theexample}
+		\setbeamercolor{background canvas}{bg=purple!25}
+		\begin{frame}[plain,noframenumbering]
+			\LARGE Ejemplo \arabic{theexample}:
+			
+			\huge #1
+		\end{frame}
+		\setbeamercolor{background canvas}{bg=purple!12}
+		}{
+		}
+
+	\newenvironment{SIDENOTE}[1]{%
+		\setbeamercolor{background canvas}{bg=orange!8}
+		\begin{frame}{Side note: #1}
+	}{
+		\end{frame}
+	}
+
+}
+
+
+
+%=========================================================================
+%
+%  COMMANDS FOR ARTICLE MODE
+%
+%-------------------------------------------------------------------------
+\mode<article>{
+	\usepackage[top=1in, bottom=1.25in, left=1.25in, right=1.25in]{geometry}
+	
+	\newcommand{\ITEM}[2]{%
+		\begin{tabu} to \textwidth {X[1,c,m]X[4,l,m]}
+			\hline
+			#1 & #2 \\ \hline
+		\end{tabu}
+	}
+	
+	\newcommand{\EQ}[2]{%
+		\begin{tabu} to \columnwidth {X[1,cm]X[4,lm]}
+			\rowcolor{orange!10}
+			#1 & \begin{equation*}   #2 \end{equation*}\\ 
+		\end{tabu}
+	}
+
+	\usepackage{framed}
+	\newenvironment{EXAMPLE}[1]{%
+		\stepcounter{theexample}
+		\begin{framed}
+			\colorbox{teal}{\textcolor{white}{\Large Ejemplo
+            \arabic{theexample}: #1}} 
+			\vspace{1em}		\\
+	}{
+		\end{framed}
+	}
+	
+	\newenvironment{SIDENOTE}[1]{%
+	\begin{framed}
+		\colorbox{orange!80!black}{\textcolor{white}{Side note: #1}} 
+		}{
+	\end{framed}
+}
+
+}
+
+
+
+%=========================================================================
+%
+%  COMMANDS FOR ALL MODES
+%
+%-------------------------------------------------------------------------
+    \makeatletter
+    \patchcmd{\beamer@sectionintoc}{\vskip1.5em}{\vskip0.5em}{}{}
+    \makeatother
+
+\newcommand{\makeFrameTitle}{%
+	\begin{frame}[plain,noframenumbering]%
+	\begin{textblock*}
+		\includegraphics[height=2.0cm]{imag/LUIS.png}\hfill\includegraphics[height=2.0cm]{imag/atlantida.png}
+	\end{textblock*}
+	\vspace{0.5cm}\maketitle%
+	\end{frame}%
+	
+		
+	\begin{frame}[plain,noframenumbering]{Contenido}    
+		\setbeamertemplate{section in toc}[sections numbered]
+		\setbeamertemplate{subsection in toc}[subsections numbered]	
+		\tableofcontents
+	\end{frame}
+	
+}
+
+\newcommand{\contn}{\hfill(cont'n)}
+
+
+
+\newcommand{\makeReferencesFrame}[1]{
+	\begin{frame}[fragile,allowframebreaks]
+		\nocite{#1}
+		\printbibliography
+	\end{frame}
+}
+
+
+\newcommand{\CASE}[1]{ \colorbox{Coral4}{\color{white} #1} \vspace{1em}}
+
+
+\newcommand{\IMPORTANT}[1]{%
+	\begin{tabu}  {>{\columncolor{DodgerBlue4!10}}X[c,m]}
+		\begin{equation*} #1 \end{equation*}\\
+	\end{tabu}
+}
+
+
+\newcommand{\NOTICE}[1]{%
+	\begin{tabu} {>{\columncolor{Yellow1!30}}X[c,m]}
+		\begin{equation*} #1 \end{equation*}\\
+	\end{tabu}
+}
+
+
+
+\newcommand{\colorblock}[3]
+{\begingroup
+	\setbeamercolor{block title}{bg=#1,fg=white}
+	\setbeamercolor{block body}{bg=#1!6}
+	\begin{block}{#2}
+		#3
+	\end{block}
+	\endgroup
+}
+
+
+%-------------------------------------------------------------------------
+
+\newcommand{\rojitas}[1]{\textbf{{\color{red} #1}}} 
+\newcommand{\negritas}[1]{\textbf{#1}} 
+\newcommand{\espacio}{\vspace{1em}}
+\newcommand{\itemdos}{\item[\checkmark]}
+\newcommand{\flechas}{\item[$\rightarrow$]}
+
+
+\newcommand{\ALTERNATE}[2]{%
+	\only<article>{#1}\only<presentation>{#2}
+}
+
+
+
+

@@ -1,0 +1,83 @@
+\documentclass[10pt, xcolor=table, x11names]{beamer}
+\usepackage[spanish]{babel} %CORTE DE PALABRAS RESPETANDO EL IDIOMA ESPAÑOL.
+\usepackage[Utf8]{inputenc} %acentos desde el teclado
+\usepackage	{textpos}
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning} 
+\usefonttheme{professionalfonts} % fuentes de LaTeX\epsilon
+\usetheme{Boadilla}      % or try Darmstadt, Madrid, Warsaw, ...
+\usecolortheme[RGB={130,130,190}]{structure} % or try albatross, beaver, crane, ...
+\useinnertheme{rounded}
+%\useoutertheme{shadow}
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamertemplate{navigation symbols}{}
+\setbeamercovered{transparent} % Velos
+\setbeamertemplate{caption}[numbered]
+\usepackage[spanish, authoryear, roud, datebegin]{flexbib} %CITAS BIBLIOGRÁFICAS
+\newtheorem{Teorema}{Teorema}
+\usepackage{ragged2e}
+\justifying
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[x11names,table]{xcolor}
+\usepackage[pdftex]{graphicx}
+\usepackage{epstopdf} % Convertir .eps a .pdf (si fuera necesario)
+\DeclareGraphicsExtensions{.pdf,.png,.jpg, .eps} % busca en este orden!
+\title[]{ENFOQUE DE ORGANIZACIÓN INDUSTRIA (OI): INTRODUCCIÓN}
+\author[Luis Ortiz]{Luis Ortiz Cevallos}
+\institute[SECMCA]{\bf SECMCA}
+\date[\today]{\footnotesize \today}
+\usepackage[pdftex]{hyperref}
+\hypersetup{colorlinks,%
+	citecolor=blue,%
+	filecolor=blue,%
+	linkcolor=blue,%
+	urlcolor=blue,%
+	pdftex}
+
+\begin{document}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{{\normalsize INTRODUCCIÓN} {}}
+OBJETIVOS:
+\begin{itemize}
+    \item Estudiar las implicaciones de la teoría estándar de IO sobre el comportamiento de los bancos, con el fin de clarificar las nociones de precio competitivo, poder de mercado y competencia monopolistica.
+    \item Estudiar características específicas de los bancos sobre precios y cantidades de equilibrio, lo que significa considerar un amplio set de variables y estrategias disponibles por los bancos; aquí se asoman las siguientes pregutas:
+    \begin{enumerate}
+        \item ¿Las tasas de interés de los bancos es pegajosa, es decir varía menos que la tasa de interés de mercado \cite{bibid}.
+        \item A pesar del desarrollo del internet, ¿la distancia entre un banco y una firma aún importa \cite{bibid}-
+        \item ¿Cuál es La posibilidad de un racionamiento del crédito \cite{bibid}.?
+        \item La existencia de ``un curso de ganadores'' que hace que el crédito bancario hacia nuevo emprendedores sea menos beneficioso para entrantes que para los encubadores \cite{bibid}.
+          
+    \end{enumerate}
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+    \frametitle{{\normalsize INTRODUCCIÓN} {}}
+      Los supuestos generales de los modelos del enfoque IO son los siguientes:
+      \begin{itemize}
+          \item Los bancos son definidos como intermediarios financieros 
+          \item La tecnología bancaría se encuentra dada
+      \end{itemize}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{{\large 
+		Bibliografía}}
+\renewcommand{\refname}{Referencias}
+\bibliography{Biblioteca}
+\bibliographystyle{flexbib}
+\end{frame}
+
+\end{document}

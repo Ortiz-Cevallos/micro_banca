@@ -1,0 +1,155 @@
+\begin{frame}
+	\frametitle{{\normalsize INTRODUCCIÓN} {}}
+	\setcounter{equation}{0}
+Basados en  \cite{Diamond1991} se extiende el modelo del mercado de crédito con moral hazard incorporando más períodos (es decir dándole dinámica, t=0,1). El objetivo es que las firmas puedan generar cierta reputación para financiarse directamente y no a través de créditos que es más caro.
+
+ 
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize MONITOREO Y REPUTACIÓN} {}}
+    
+    \begin{block} {Estructura básica del modelo}
+        \begin{description}
+              \item[Supuesto 1]  Las firmas buscan inversionistas para proyectos cuya inversión sea de costos fijos normalizados en 1.
+            \item[Supuesto 2] La tasa libre de riesgo está normalizada a 0 ($r=0$). 
+            \item[Supuesto 3] Las firmas tienen que escoger entre los siguientes proyectos:
+            \begin{enumerate}
+               \item \textit{Tecnología buena.} la cual produce un suceso G con una probabilidad de $\pi_{G} $ y cero en el otro caso.
+               \item \textit{Tecnología mala.} la cual produce un suceso B con una probabilidad de $\pi_{B} $ y cero en el otro caso.
+            \end{enumerate}
+            \item[Supuesto 4] Sólo los buenos proyectos tienen un valor presente neto positivo. Es de notar que: $\pi_{G}G>1>\pi_{B}B $, pero $B>G\rightarrow \pi_{G}>\pi_{B} $; esto último significa que a mayor rentabilidad menor probabilidad de ocurrencia. 
+           
+             
+            \end{description}
+        
+    \end{block}	
+    
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{{\normalsize MONITOREO Y REPUTACIÓN} {}}
+    
+    \begin{block} {Estructura básica del modelo}
+        \begin{description}
+             \item[Supuesto 5] Asuma que el suceso de la inversión es verificable por externos; pero no la elección de tecnología de las firmas ni su retorno. Por tanto la firma puede hacer una promesa de pago de un monto fijo R sólo en caso se da el suceso de la inversión.
+            \item[Supuesto 6] Las firmas no tienen otra fuente de recursos, así que no paga la promesa en caso la inversión falla.
+           \item[Supuesto 7] Con el objeto de introducir el concepto de reputación, supondremos firmas heterogéneas, sólo una fracción f de las firmas tienen acceso a los dos tipos de tecnologías. El resto sólo acceden a la tecnología mala y el monitoreo de los bancos no los afecta. 
+        \end{description}
+          
+    \end{block}	
+
+   
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{{\normalsize MONITOREO Y REPUTACIÓN} {}}	
+
+Bajo algunas condiciones de los parámetros del modelo, el equilibrio del mercado de crédito debería de ser tal que:
+\begin{enumerate}
+	\item En t=0, todas las firmas son financiadas por los bancos
+	\item En t=1. las firmas con un buen suceso en t=0, pueden financiarse de manera directa, el resto se financia por los bancos.
+	\item Los bancos monitorean a las firmas que financian.
+\end{enumerate} 
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{{\normalsize MONITOREO Y REPUTACIÓN} {}}
+
+ Una firma con un buen suceso en t=0 podrían emitir deuda directa si se cumple que:
+ \begin{align}
+ \pi_{s}&>\frac{1}{R_{C}}
+ \end{align}
+ Donde $\pi_{s} $ es la probabilidad de reponer el financiamiento en la fecha 2, condicional al suceso en la fecha 0. Aplicando la formula de Bayes, tenemos:
+ \begin{align}
+ \pi_{s}&=\frac{P(\mbox{suceso en t=0 y t=1})}{P(\mbox{suceso en t=0})}=\frac{f\pi_{G}^{2}+(1-f)\pi_{B}^{2}}{f\pi_{G}+(1-f)\pi_{B}}
+ \end{align}
+ Si se satisface 1, la firmas con suceso pueden emitir deuda directa
+  a una tasa $R_{s}\frac{1}{\pi_{s}} $. La probabilidad de que aquellas firmas con mal suceso en t=0, tengan un buen sueceso en t=1 es:
+ \begin{align}
+ \pi_{m}&=\frac{f\pi_{G}(1-\pi_{G})+(1-f)\pi_{B}(1-\pi_{B})}{f(1-\pi_{G})+(1-f)(1-\pi_{B})}
+ \end{align}
+  
+ \end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize MONITOREO Y REPUTACIÓN} {}}
+Considerando el el nivel critico de tasa, tenemos:
+  \begin{align}
+  \frac{1+C}{G}&<\pi_{m}<\frac{1}{R_{C}}
+  \end{align} 
+Las firmas con mal suceso deben prestarle a los bancos a una tasa:
+ \begin{align}
+ R_{m}&=\frac{1+C}{\pi_{m}}
+ \end{align}   
+En orden de completar el modelo, es necesario solo establecer que en t=0, para adecuados valores de los parámetros, todas las firmas (dado que no hay forma de distinguirlas) se financia a través de los bancos.\\
+Si $\pi_{0}$ denota la probabilidad incondicional del suceso en t=0 (llamada la estrategia de la firma en seleccionar el proyecto bueno dado que son monitoreadas)
+\begin{align}
+\pi_{0}&=f\pi_{G}+(1-f)\pi_{B}
+\end{align}   
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize MONITOREO Y REPUTACIÓN} {}}
+    La noción de reputación se construye desde el hecho $\pi_{m}<\pi_{0}<\pi_{s} $, esto es que la probabilidad de reponer la deuda pra la firma es inicialmente $\pi_{0}$, pero esta se incrementa si las firmas tienen un buen suceso ($\pi_{s}$) y decrece en el otro caso ($\pi_{m}$). Esto se debe a que el nivel critico de deuda ($R_{C}^{0} $) en t=0 es alto con respecto al caso estático. Adicionalmente las firmas saben que si ellos tienen un buen suceso en t=0, ellos pueden obtener financiamiento barato ($R_{s} $ en vez de  $ R_{m}$) en t=1. Si $\delta<1$ denota el factor de descuento, el nivel crítico de deuda el cual estratégicamente la firma escoge  los malos proyectos en t=0 (denotado por $R_{C}^{0}$) es ahora definido por:
+  \begin{align}
+  \pi_{B}\left[B-R_{C}^{0}+\delta\pi_{G}(G-R_{s}) \right]+(1-\pi_{B})\delta \pi_{G}(G-R_{m})&= \nonumber \\
+  \pi_{G}\left[G-R_{C}^{0}+\delta\pi_{G}(G-R_{S}) \right]+(1-\pi_{G})\delta \pi_{G}(G-R_{m}) 
+  \end{align}  
+  
+\end{frame}
+
+
+\begin{frame}
+\frametitle{{\normalsize MONITOREO Y REPUTACIÓN} {}}
+ 
+El lado izquierdo de esta identidad es la suma descontada de los beneficios esperados de las firmas que escogen la mala tecnología en t=0. Note que en t=1, podrían escogerse la tecnología buena ya sea emitiendo deuda directamente al mercado a una tasa $R_{S} $ o pidiendo crédito a los bancos a una tasa $R_{m} $. El lado derecho representa la suma descontada de los beneficios esperados por las firmas que escogen el proyecto bueno en t=0 (así también en t=1). Solucionando R tenemos:
+
+\begin{align}
+R_{C}^{0}&=\frac{\pi_{G}G-\pi_{B}B}{\pi_{G}-\pi_{B}}+\delta \pi_{G}(G-R_{s})-\delta \pi_{G}(G-R_{m})\nonumber \\
+R_{C}^{0}&=R_{C}+\delta \pi_{G}(R_{m}-R_{s})  
+\end{align}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{{\normalsize MONITOREO Y REPUTACIÓN} {}}
+   
+   
+  \begin{block} {Resultado}
+  Bajo el siguiente supuesto:
+    \begin{align}
+    \pi_{0}&\leq \frac{1}{R_{C}^{0}}\;\;\;\pi_{s}> \frac{1}{R_{C}^{0}}\;\wedge\;\frac{1}{R_{C}^{0}}>\pi_{m}>\frac{1+C}{G}
+    \end{align}  
+    El equilibrio se caracteriza por:
+    \begin{enumerate}
+        \item En t=0, todas las firmas se financia por los bancos a $R_{0}=\frac{1+C}{\pi_{0}}$
+        \item En t=1. las firmas con buen suceso en t=0 se financia de manera directa a 
+        $R_{s}=\frac{1}{\pi_{s}}$. Mientras el resto de firmas se financian con crédito a una tasa $R_{m}=\frac{1+C}{\pi_{m}}$, lo cual es más alto que $R_{0}$.
+        
+    \end{enumerate}  
+  \end{block}	
+   
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{{\normalsize MONITOREO Y REPUTACIÓN} {}}
+      
+    \begin{block} {Conclusión}
+        El modelo anterior permite capturar múltiples características del mercado de crédito:
+       \begin{enumerate}
+           \item Firmas con buena reputación pueden emitir deuda de forma directa.
+           \item Las Firmas con malos sucesos pagan más altas tasas que una firma nueva ($ R_{m}>R_{0}$).
+           \item El moral hazard es particularmente aliviado por el efecto de reputación  ($R_{c}^{0}>R_{C}$)
+       \end{enumerate}
+    \end{block}	
+    
+\end{frame}
+
